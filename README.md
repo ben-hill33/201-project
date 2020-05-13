@@ -7,4 +7,4 @@ Authors: Ben Hill, Davee Sok, Taylor Thornton
 
 ## Wireframe
 
-[Wireframe](img/201 Wireframe.jpeg)
+![Wireframe](img/201-Wireframe.jpeg)
