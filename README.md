@@ -2,13 +2,9 @@
 
 This is the class project for 201.
 
-Authors: Ben Hill, Davee Sok
-
-Taylor Thornton
+Authors: Ben Hill, Davee Sok, Taylor Thornton
 
 
-Authors: Ben Hill
-Authors: Ben Hill, Taylor Thornton, Davee Sok
+## Wireframe
 
-This is Davee's edit. 
-
+[Wireframe](img/201 Wireframe.jpeg)
