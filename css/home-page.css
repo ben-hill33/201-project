@@ -1,0 +1,15 @@
+#gameInstructions {
+  width: 800px;
+  height: 300px;
+  border: 1px solid green;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#forms {
+  width: 800px;
+  height: 300px;
+  border: 1px solid green;
+  margin: 10px auto;
+  text-align: center;
+}
