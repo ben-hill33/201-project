@@ -6,23 +6,27 @@
   overflow: auto;
 }
 
+section {
+  width: 1000px;
+  min-height: 720px;
+  border: 1px solid orangered;
+}
 
 #code-block {
-  width: 600px;
-  height: 600px;
-  margin: 10px 25px;
+  width: 700px;
+  height: 700px;
+  margin: 10px 20px;
   float: left;
-  overflow: auto;
+  /* overflow: auto; */
   border: 1px solid green;
-  clear: right;
 }
 
 #status-bar {
-  width: 300px;
-  height: 600px;
-  margin: 10px;
+  width: 220px;
+  height: 700px;
+  margin: 10px 20px 10px 10px;
   float: left;
-  overflow: auto;
+  /* overflow: auto; */
   border: 1px solid purple;
 }
 
@@ -33,15 +37,10 @@
   border: 1px solid blue;
 }
 
-#exit {
+#see-results {
   width: 300px;
   height: 100px;
   margin: 10px auto;
   border: 1px solid blue;
 }
 
-section {
-  width: 1000px;
-  height: 800px;
-  overflow: auto;
-}
