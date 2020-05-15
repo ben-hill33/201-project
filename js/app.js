@@ -9,11 +9,20 @@ var currentPLayerIndex;
 var currentPlayerName;
 
 
+
 function saveToLocalStorage() {
   var savedPlayers = JSON.stringify(playersData);
   localStorage.setItem('PlayerData', savedPlayers);
-  localStorage.setItem('currentPlayer', currentPLayerIndex);
+  localStorage.setItem('currentPlayerIndex', `${currentPLayerIndex}`);
   localStorage.setItem('currentPlayerName', currentPlayerName);
+}
+
+function loadLocalStorage() {
+  if (localStorage.getItem('PlayerData')) {
+    currentPLayerIndex = +localStorage.getItem('currentPLayerIndex');
+    currentPlayerName = localStorage.getItem('currentPlayerName');
+    playersData = JSON.parse(localStorage.getItem('PlayerData'));
+  }
 }
 
 
@@ -26,7 +35,7 @@ function CodeBlockPair(codeBlockImg, answer) {
 
 
 new CodeBlockPair('./codeBlock-images/Answer4.png', [4]);
-new CodeBlockPair('./codeBlock-images/Answer8.png', [8]);
+new CodeBlockPair('./codeBlock-images/Answer8.png', [8, 18]);
 new CodeBlockPair('./codeBlock-images/Answer12.png', [12]);
 new CodeBlockPair('./codeBlock-images/Answer16.png', [16]);
 new CodeBlockPair('./codeBlock-images/Answer21.png', [21]);
@@ -41,7 +50,7 @@ function Player(name) {
 
 
 // Constructor Function to Create New Session Object
-function Session(day) {
+function Session() {
   this.day = new Date();
   this.attempts = 0;
   this.correctAttempts = 0;
@@ -51,6 +60,7 @@ function Session(day) {
 
 function checkIfUserHasPlayed(name) {
   var playerPresent = false;
+  currentPLayerIndex = playersData.length;
   for (var i = 0; i < playersData.length; i++) {
     if (name === playersData[i].name) {
       playerPresent = true;
@@ -67,10 +77,13 @@ function addPlayerToData (currentPlayerName){
     new Session();
   } else {
     new Player(currentPlayerName);
+    new Session();
   }
 }
 
 
+
+loadLocalStorage();
 
 // Add Event Listener to Name Submission on Main Page
 var form = document.getElementById('userForm');
