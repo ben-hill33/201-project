@@ -3,22 +3,27 @@
 ////////// Main Page /////////////
 
 // add event listener to click here to play button
-  // if user hits button
-  // check if user is already in database
-    // if they aren't present
-      // create new user
-    // if they are present
-      // create player session
-  // assign current player
-  // assign current session
-  // direct user to game page
+// if user hits button
+// check if user is already in database
+// if they aren't present
+// create new user
+// if they are present
+// create player session
+// assign current player
+// assign current session
+// direct user to game page
 
 
 var playersData = [];
 var codeBlockWithAnswers = [];
-var currentPLayer = 0;
+var currentPLayerIndex;
 var currentPlayerName;
-var date = new Date();
+
+
+function savePlayerLocalStorage() {
+  var savedPlayers = JSON.stringify(playersData);
+  localStorage.setItem('PlayerData', savedPlayers);
+}
 
 
 // Constructor Function for CodeBlockPair with Answers
@@ -56,15 +61,6 @@ function Session(day) {
   playersData[currentPLayer].session.push(this);
 }
 
-function handleSubmitName(event) {
-  event.preventDefault();
-  currentPlayerName = event.target.name.value;
-  currentPlayerName = currentPlayerName.toLowerCase();
-}
-
-var userName = document.getElementById('userForm');
-userName.addEventListener('submit', handleSubmitName);
-
 
 function checkIfUserHasPlayed(name) {
   var playerPresent = false;
@@ -76,4 +72,22 @@ function checkIfUserHasPlayed(name) {
   }
   return playerPresent;
 }
+
+
+var userName = document.getElementById('userForm');
+userName.addEventListener('submit', handleSubmitName);
+
+
+function handleSubmitName(event) {
+  event.preventDefault();
+  currentPlayerName = event.target.name.value;
+  currentPlayerName = currentPlayerName.toLowerCase();
+  localStorage.setItem('playerName', currentPlayerName);
+  var name = localStorage.getItem('playerName');
+
+}
+
+
+
+
 
