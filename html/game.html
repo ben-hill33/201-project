@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="/css/style.css" type="text/css" rel="stylesheet"> -->
+    <link href="/css/game-page.css" type="text/css" rel="stylesheet" />
+    <title>Game Page</title>
+  </head>
 
-<head>
-  <link href="/css/reset.css" type="text/css" rel="stylesheet">
-  <!-- <link href="/css/style.css" type="text/css" rel="stylesheet"> -->
-  <link href="/css/game-page.css" type="text/css" rel="stylesheet">
-  <title>Game Page</title>
-</head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="../index.html">Main Page</a></li>
+        <li><a href="result.html">Result Page</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </header>
 
-<body>
-
-  <header>
-    <ul>
-      <li><a href="../index.html">Main Page</a></li>
-      <li><a href="result.html">Result Page</a></li>
-      <li><a href="about-us.html">About Us</a></li>
-    </ul>
-  </header>
-
-  <main>
-
-    <h1>Game Page</h1>
-    <div id="timer">
-      <h2 id="counter"></h2>
-    </div>
-
-    <section>
-      <div id="code-block">
-        <h2>Code Block</h2>
+    <main>
+      <h1>Game Page</h1>
+      <div id="timer">
+        <h2 id="counter"></h2>
       </div>
 
-      <div id="status-bar">
-        <h2>Status Bar</h2>
+      <section>
+        <div id="code-block">
+          <h2>Code Block</h2>
+          <img id="codeBlock-img" title="" alt="" src="" />
+        </div>
+
+        <div id="status-bar">
+          <h2>Status Bar</h2>
+        </div>
+      </section>
+
+      <div id="user-input-box">
+        <form>
+          <label>What Line is the error on?</label>
+          <input
+            id="userAnswer"
+            type="number"
+            placeholder="Enter a number"
+            required
+          />
+          <br />
+          <button value="enter">Enter</button>
+        </form>
       </div>
-    </section>
 
-    <div id="user-input-box">
-      <form>
-        <label>What Line is the error on?</label>
-        <input id="userAnswer" type="number" placeholder="Enter a number" required>
-        <br>
-        <button value="enter">Enter</button>
-      </form>
-    </div>
+      <div id="see-results">
+        <a href="result.html">
+          <h2>See Your Results</h2>
+        </a>
+      </div>
+    </main>
 
-    <div id="see-results">
-      <a href="result.html">
-        <h2>See Your Results</h2>
-      </a>
-    </div>
-
-  </main>
-
-  <footer>
-    <h1>footer</h1>
-  </footer>
-  <script src="../js/app.js"></script>
-  <script src="../js/gamePage.js"></script>
-</body>
-
+    <footer>
+      <h1>footer</h1>
+    </footer>
+    <script src="../js/app.js"></script>
+    <script src="../js/gamePage.js"></script>
+  </body>
 </html>

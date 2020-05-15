@@ -1,45 +1,25 @@
-'use strict';
+"use strict";
 
 ////////// Main Page /////////////
 
-
 var playersData = [];
-var codeBlockWithAnswers = [];
 var currentPLayerIndex;
 var currentPlayerName;
 
-
-
 function saveToLocalStorage() {
   var savedPlayers = JSON.stringify(playersData);
-  localStorage.setItem('PlayerData', savedPlayers);
-  localStorage.setItem('currentPlayerIndex', `${currentPLayerIndex}`);
-  localStorage.setItem('currentPlayerName', currentPlayerName);
+  localStorage.setItem("PlayerData", savedPlayers);
+  localStorage.setItem("currentPlayerIndex", `${currentPLayerIndex}`);
+  localStorage.setItem("currentPlayerName", currentPlayerName);
 }
 
 function loadLocalStorage() {
-  if (localStorage.getItem('PlayerData')) {
-    currentPLayerIndex = +localStorage.getItem('currentPLayerIndex');
-    currentPlayerName = localStorage.getItem('currentPlayerName');
-    playersData = JSON.parse(localStorage.getItem('PlayerData'));
+  if (localStorage.getItem("PlayerData")) {
+    currentPLayerIndex = +localStorage.getItem("currentPLayerIndex");
+    currentPlayerName = localStorage.getItem("currentPlayerName");
+    playersData = JSON.parse(localStorage.getItem("PlayerData"));
   }
 }
-
-
-// Constructor Function for CodeBlockPair with Answers
-function CodeBlockPair(codeBlockImg, answer) {
-  this.codeBlockImg = codeBlockImg;
-  this.answer = answer;
-  codeBlockWithAnswers.push(this);
-}
-
-
-new CodeBlockPair('./codeBlock-images/Answer4.png', [4]);
-new CodeBlockPair('./codeBlock-images/Answer8.png', [8, 18]);
-new CodeBlockPair('./codeBlock-images/Answer12.png', [12]);
-new CodeBlockPair('./codeBlock-images/Answer16.png', [16]);
-new CodeBlockPair('./codeBlock-images/Answer21.png', [21]);
-
 
 // Constructor Function to Create New Player Object
 function Player(name) {
@@ -48,7 +28,6 @@ function Player(name) {
   playersData.push(this);
 }
 
-
 // Constructor Function to Create New Session Object
 function Session() {
   this.day = new Date();
@@ -56,7 +35,6 @@ function Session() {
   this.correctAttempts = 0;
   playersData[currentPLayerIndex].session.push(this);
 }
-
 
 function checkIfUserHasPlayed(name) {
   var playerPresent = false;
@@ -71,8 +49,7 @@ function checkIfUserHasPlayed(name) {
   return playerPresent;
 }
 
-
-function addPlayerToData (currentPlayerName){
+function addPlayerToData(currentPlayerName) {
   if (checkIfUserHasPlayed(currentPlayerName)) {
     new Session();
   } else {
@@ -81,13 +58,11 @@ function addPlayerToData (currentPlayerName){
   }
 }
 
-
-
 loadLocalStorage();
 
 // Add Event Listener to Name Submission on Main Page
-var form = document.getElementById('userForm');
-form.addEventListener('submit', handleSubmitName);
+var form = document.getElementById("userForm");
+form.addEventListener("submit", handleSubmitName);
 
 function handleSubmitName(event) {
   event.preventDefault();
@@ -97,9 +72,3 @@ function handleSubmitName(event) {
   saveToLocalStorage();
   console.log(localStorage);
 }
-
-
-
-
-
-
