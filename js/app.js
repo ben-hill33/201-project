@@ -2,17 +2,6 @@
 
 ////////// Main Page /////////////
 
-// add event listener to click here to play button
-// if user hits button
-// check if user is already in database
-// if they aren't present
-// create new user
-// if they are present
-// create player session
-// assign current player
-// assign current session
-// direct user to game page
-
 
 var playersData = [];
 var codeBlockWithAnswers = [];
@@ -20,9 +9,11 @@ var currentPLayerIndex;
 var currentPlayerName;
 
 
-function savePlayerLocalStorage() {
+function saveToLocalStorage() {
   var savedPlayers = JSON.stringify(playersData);
   localStorage.setItem('PlayerData', savedPlayers);
+  localStorage.setItem('currentPlayer', currentPLayerIndex);
+  localStorage.setItem('currentPlayerName', currentPlayerName);
 }
 
 
@@ -32,6 +23,7 @@ function CodeBlockPair(codeBlockImg, answer) {
   this.answer = answer;
   codeBlockWithAnswers.push(this);
 }
+
 
 new CodeBlockPair('./codeBlock-images/Answer4.png', [4]);
 new CodeBlockPair('./codeBlock-images/Answer8.png', [8]);
@@ -47,18 +39,13 @@ function Player(name) {
   playersData.push(this);
 }
 
-// Testing Player Constructor
-new Player('Ben');
-new Player('Davee');
-new Player('Taylor');
-
 
 // Constructor Function to Create New Session Object
 function Session(day) {
-  this.day = day;
+  this.day = new Date();
   this.attempts = 0;
   this.correctAttempts = 0;
-  playersData[currentPLayer].session.push(this);
+  playersData[currentPLayerIndex].session.push(this);
 }
 
 
@@ -67,6 +54,7 @@ function checkIfUserHasPlayed(name) {
   for (var i = 0; i < playersData.length; i++) {
     if (name === playersData[i].name) {
       playerPresent = true;
+      currentPLayerIndex = i;
       break;
     }
   }
@@ -74,18 +62,29 @@ function checkIfUserHasPlayed(name) {
 }
 
 
-var userName = document.getElementById('userForm');
-userName.addEventListener('submit', handleSubmitName);
+function addPlayerToData (currentPlayerName){
+  if (checkIfUserHasPlayed(currentPlayerName)) {
+    new Session();
+  } else {
+    new Player(currentPlayerName);
+  }
+}
 
+
+
+// Add Event Listener to Name Submission on Main Page
+var form = document.getElementById('userForm');
+form.addEventListener('submit', handleSubmitName);
 
 function handleSubmitName(event) {
   event.preventDefault();
   currentPlayerName = event.target.name.value;
   currentPlayerName = currentPlayerName.toLowerCase();
-  localStorage.setItem('playerName', currentPlayerName);
-  var name = localStorage.getItem('playerName');
-
+  addPlayerToData(currentPlayerName);
+  saveToLocalStorage();
+  console.log(localStorage);
 }
+
 
 
 
