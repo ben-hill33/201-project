@@ -4,10 +4,23 @@ body {
 
 header, footer{
   width: 1000px;
-  height: 100px;
+  height: 80px;
   margin: 10px auto;  
   border: 1px solid red;
 }
+
+
+nav {
+	text-align: center;
+  margin-top: 30px;
+  
+}
+
+nav li {
+  display: inline;
+  font-family: 'Rajdhani', sans-serif;
+}
+
 
 main {
   width: 1000px;
@@ -17,15 +30,20 @@ main {
 }
 
 h1 {
+
+  /* font-family: 'Faster One', cursive; */
+  font-family: 'Monofett', cursive;
   margin: 20px auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 55px;
+  color: blue
 }
 
 h2 {
   margin: 10px auto;
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
+  font-family: 'Monofett', cursive;
   border: 1px dotted orange;
 }
 
@@ -33,6 +51,7 @@ p {
   margin: 10px auto;
   max-width: 500px;
   text-align: center;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 div {
@@ -42,3 +61,4 @@ div {
   text-align: center;
   border: 1px solid blue;
 }
+
