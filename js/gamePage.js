@@ -11,6 +11,7 @@ var nextButton = document.getElementById('nextButton');
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
 nextButton.addEventListener('click', handleNextQuestionButton);
 
+// Variables
 var codeBlockWithAnswers = [];
 var currentCodeBlock;
 
@@ -52,7 +53,6 @@ function handleSubmitAnswer(event) {
 
   if (currentCodeBlock.answer.includes(userAnswer)) {
     currentSession.correctAttempts++;
-
     resultMessage.innerHTML = 'Correct!!';
     resultMessage.style.color = 'green';
   } else {

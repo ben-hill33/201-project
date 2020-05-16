@@ -1,9 +1,12 @@
 'use strict';
 
-// Add Event Listener to Name Submission on Main Page
+// Elements
 var form = document.getElementById('userForm');
+
+// Event Listeners
 form.addEventListener('submit', handleSubmitName);
 
+// Variables
 var playersData = [];
 var currentPLayerIndex;
 var currentPlayerName;
@@ -23,14 +26,14 @@ function loadLocalStorage() {
   }
 }
 
-// Constructor Function to Create New Player Object
+// Declare New PLayer Object
 function Player(name) {
   this.name = name.toLowerCase();
   this.session = [];
   playersData.push(this);
 }
 
-// Constructor Function to Create New Session Object
+// Declare New Player Session
 function Session() {
   this.day = new Date();
   this.attempts = 0;
