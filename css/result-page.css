@@ -24,3 +24,45 @@ td {
   padding: 15px;
   text-align: right;
 }
+
+main {
+  width: 960px;
+  height: 600px;
+  margin: 10px auto;
+}
+
+nav {
+	text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-flex;
+}
+
+nav ul {
+  display: inline-flex;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+nav li {
+  display: inline;
+  font-family: 'Rajdhani', sans-serif;
+  margin-right: 50px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+  display: inline-flex;
+  background-color: white
+}
+
+.shrink:hover
+{
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+
+footer {
+  margin-top: 50px;
+}
+

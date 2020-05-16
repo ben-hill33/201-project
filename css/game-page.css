@@ -2,54 +2,138 @@
   width: 300px;
   height: 100px;
   margin: 20px auto;
-  border: 1px solid blue;
   overflow: auto;
 }
 
-section {
-  width: 1000px;
-  min-height: 720px;
-  border: 1px solid orangered;
+main {
+  width: 960px;
+  height: 600px;
+  margin: 10px auto;
 }
+
 
 #code-block {
   width: 700px;
-  height: 700px;
-  margin: 10px 20px;
-  float: left;
+  height: 200px;
+  margin: 150px;
   /* overflow: auto; */
-  border: 1px solid green;
 }
 
-#status-bar {
+.goToResults {
+  height:25px;
+  width:125px;
+  float: right;
+  margin-top: -25px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+/* #status-bar {
   width: 220px;
   height: 700px;
   margin: 10px 20px 10px 10px;
   float: left;
   /* overflow: auto; */
-  border: 1px solid purple;
-}
+  /* border: 1px solid purple; */
+/* } */
 
-#user-input-box {
-  width: 300px;
-  height: 100px;
-  margin: 20px auto;
-  border: 1px solid blue;
-}
-
-#see-results {
-  width: 300px;
-  height: 100px;
-  margin: 10px auto;
-  border: 1px solid blue;
-}
 
 #resultMessageContainer {
   width: 300px;
   height: 100px;
-  border: 2px solid red;
+  float: right;
 }
 
 #nextButton {
   visibility: hidden;
+  width: 100px;
+  height: 75px;
+  float: right;
+  display: inline-flex;
+  margin-top: -125px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.timerDisplay {
+  float: left;
+}
+
+.inputBoxDisplay {
+  width: 300px;
+  height: 110px;
+  float: left;
+  margin-top: -125px;
+  margin-left: 325px;
+}
+
+footer {
+  margin-top: 50px;
+}
+
+nav {
+	text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-flex;
+}
+
+nav ul {
+  display: inline-flex;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+nav li {
+  display: inline;
+  font-family: 'Rajdhani', sans-serif;
+  margin-right: 50px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+  display: inline-flex;
+  background-color: white
+}
+
+.shrink:hover
+{
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+
+a:hover {
+  color: orange;
+}
+
+button {
+  border: 0;
+  background: orangered;
+  border-radius: 4px;
+  box-shadow: 0 10px 0 orange;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  margin: 5px auto;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+
+button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+
+button, input, select, textarea {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 100%;
+}
+
+label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 15px;
+}
+
+form input {
+  width: 75%;
+  margin-top: 5px;
 }
