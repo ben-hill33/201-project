@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 ////////// Main Page /////////////
 
@@ -8,16 +8,16 @@ var currentPlayerName;
 
 function saveToLocalStorage() {
   var savedPlayers = JSON.stringify(playersData);
-  localStorage.setItem("PlayerData", savedPlayers);
-  localStorage.setItem("currentPlayerIndex", `${currentPLayerIndex}`);
-  localStorage.setItem("currentPlayerName", currentPlayerName);
+  localStorage.setItem('PlayerData', savedPlayers);
+  localStorage.setItem('currentPlayerIndex', `${currentPLayerIndex}`);
+  localStorage.setItem('currentPlayerName', currentPlayerName);
 }
 
 function loadLocalStorage() {
-  if (localStorage.getItem("PlayerData")) {
-    currentPLayerIndex = +localStorage.getItem("currentPLayerIndex");
-    currentPlayerName = localStorage.getItem("currentPlayerName");
-    playersData = JSON.parse(localStorage.getItem("PlayerData"));
+  if (localStorage.getItem('PlayerData')) {
+    currentPLayerIndex = +localStorage.getItem('currentPLayerIndex');
+    currentPlayerName = localStorage.getItem('currentPlayerName');
+    playersData = JSON.parse(localStorage.getItem('PlayerData'));
   }
 }
 
@@ -61,8 +61,8 @@ function addPlayerToData(currentPlayerName) {
 loadLocalStorage();
 
 // Add Event Listener to Name Submission on Main Page
-var form = document.getElementById("userForm");
-form.addEventListener("submit", handleSubmitName);
+var form = document.getElementById('userForm');
+form.addEventListener('submit', handleSubmitName);
 
 function handleSubmitName(event) {
   event.preventDefault();

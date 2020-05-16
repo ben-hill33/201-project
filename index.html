@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <!-- <link href="css/home-page.css" type="text/css" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Monofett&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Main Page</title>
+  </head>
 
-<head>
-  <link href="css/reset.css" type="text/css" rel="stylesheet">
-  <link href="css/style.css" type="text/css" rel="stylesheet">
-  <!-- <link href="css/home-page.css" type="text/css" rel="stylesheet"> -->
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
-  <title>Main Page</title>
-</head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="html/game.html">Game Page</a></li>
+          <li><a href="html/result.html">Result Page</a></li>
+          <li><a href="html/about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<body>
+    <main id="main">
+      <h1>Can You Spot the Syntax Error?</h1>
 
-  <header>
-    <nav>
-    <ul>
-      <li><a href="html/game.html">Game Page</a></li>
-      <li><a href="html/result.html">Result Page</a></li>
-      <li><a href="html/about-us.html">About Us</a></li>
-    </ul>
-  </nav>
-  </header>
+      <div id="gameInstructions">
+        <h2>Game Instructions</h2>
+        <p>
+          After submitting your name, you will be taken to the game. There, you
+          will be shown a block of code with line numbers. As a player your task
+          will be to spot the syntax error in the block of code shown before the
+          timer runs out. Points will be added to your score if you find the
+          error, no points will be deducted for incorrect answers.
+        </p>
+      </div>
 
-  <main id="main">
-    <h1>Can You Spot the Syntax Error?</h1>
+      <div>
+        <h2>Ready to Play???</h2>
 
-    <div id="gameInstructions">
-      <h2>Game Instructions</h2>
-      <p>After submitting your name, you will be taken to the game.  There, you will be shown a block of code with line numbers.  As a player your task will be to spot the syntax error in the block of code shown before the timer runs out.  Points will be added to your score if you find the error, no points will be deducted for incorrect answers.</p>
-    </div>
+        <form id="userForm">
+          <fieldset>
+            <label>Enter Your Name</label>
+            <br />
 
-    <div>
-      <h2>Ready to Play???</h2>
+            <input id="name" type="text" placeholder="Your Name" required />
+            <br />
 
-      <form id="userForm">
-        <fieldset>
-          <label>Enter Your Name</label>
-          <br>
+            <button value="submit">Submit</button>
 
-          <input id="name" type="text" placeholder="Your Name" required>
-          <br>
+            <br />
+            <br />
 
-          <button value="submit">Submit</button>
-          <br>
-          <br>
-          <button><a href="html/game.html">Click Here to Play</a></button>
-        </fieldset>
-      </form>
+            <button><a href="html/game.html">Click Here to Play</a></button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
 
+    <footer>
+      <h1>Footer</h1>
+    </footer>
 
-
-
-    </div>
-
-  </main>
-
-  <footer>
-    <h1>Footer</h1>
-  </footer>
-
-  <script src="js/app.js"></script>
-</body>
-
+    <script src="js/app.js"></script>
+  </body>
 </html>
