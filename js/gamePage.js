@@ -9,7 +9,7 @@ var nextButton = document.getElementById('nextButton');
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
-nextButton.addEventListener('click', handleNextQuestion);
+nextButton.addEventListener('click', handleNextQuestionButton);
 
 var codeBlockWithAnswers = [];
 var currentCodeBlock;
@@ -64,8 +64,15 @@ function handleSubmitAnswer(event) {
   enterButton.style.visibility = 'hidden';
   nextButton.style.visibility = 'visible';
   saveToLocalStorage();
+  event.target.userAnswer.value = '';
 }
 
-function handleNextQuestion(event) {}
+function handleNextQuestionButton(event) {
+  event.preventDefault();
+  displayRandomCodeBlock();
+  nextButton.style.visibility = 'hidden';
+  enterButton.style.visibility = 'visible';
+  resultMessage.innerHTML = '';
+}
 
 initializeGame();
