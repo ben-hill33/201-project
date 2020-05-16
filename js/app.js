@@ -1,6 +1,8 @@
 'use strict';
 
-////////// Main Page /////////////
+// Add Event Listener to Name Submission on Main Page
+var form = document.getElementById('userForm');
+form.addEventListener('submit', handleSubmitName);
 
 var playersData = [];
 var currentPLayerIndex;
@@ -58,17 +60,13 @@ function addPlayerToData(currentPlayerName) {
   }
 }
 
-loadLocalStorage();
-
-// Add Event Listener to Name Submission on Main Page
-var form = document.getElementById('userForm');
-form.addEventListener('submit', handleSubmitName);
-
 function handleSubmitName(event) {
   event.preventDefault();
   currentPlayerName = event.target.name.value;
   currentPlayerName = currentPlayerName.toLowerCase();
   addPlayerToData(currentPlayerName);
   saveToLocalStorage();
-  console.log(localStorage);
+  window.location.replace('html/game.html');
 }
+
+loadLocalStorage();

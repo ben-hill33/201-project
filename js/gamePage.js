@@ -1,5 +1,16 @@
 'use strict';
 
+// Elements
+var codeBlock = document.getElementById('codeBlock-img');
+var userAnswerForm = document.getElementById('userAnswerForm');
+var resultMessage = document.getElementById('resultMessage');
+var enterButton = document.getElementById('enterButton');
+var nextButton = document.getElementById('nextButton');
+
+// Listeners
+userAnswerForm.addEventListener('submit', handleSubmitAnswer);
+// nextButton.addEventListener('click', handleNextQuestion);
+
 var codeBlockWithAnswers = [];
 var currentCodeBlock;
 
@@ -16,8 +27,6 @@ new CodeBlockPair('../codeBlock-images/Answer12.png', [12, 13, 14]);
 new CodeBlockPair('../codeBlock-images/Answer16.png', [16, 18, 19]);
 new CodeBlockPair('../codeBlock-images/Answer21.png', [21]);
 
-var codeBlock = document.getElementById('codeBlock-img');
-
 function randomizer(max) {
   return Math.floor(Math.random() * max);
 }
@@ -31,13 +40,9 @@ function displayRandomCodeBlock() {
 }
 
 function initializeGame() {
+  loadLocalStorage();
   displayRandomCodeBlock();
 }
-
-var userAnswerForm = document.getElementById('userAnswerForm');
-userAnswerForm.addEventListener('submit', handleSubmitAnswer);
-
-var resultMessage = document.getElementById('resultMessage');
 
 function handleSubmitAnswer(event) {
   event.preventDefault();
@@ -54,9 +59,12 @@ function handleSubmitAnswer(event) {
     resultMessage.style.color = 'red';
   }
   currentSession.attempts++;
+  enterButton.style.visibility = 'hidden';
+  nextButton.style.visibility = 'visible';
+
   console.log('CurrentSession: ', currentSession);
 }
 
-var nextButton = document.getElementById('nextButton');
+// function handleNextQuestion(event) {}
 
 initializeGame();
