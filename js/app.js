@@ -1,79 +1,75 @@
 'use strict';
 
-////////// Main Page /////////////
+// Elements
+var form = document.getElementById('userForm');
 
-// add event listener to click here to play button
-  // if user hits button
-  // check if user is already in database
-    // if they aren't present
-      // create new user
-    // if they are present
-      // create player session
-  // assign current player
-  // assign current session
-  // direct user to game page
+// Event Listeners
+form.addEventListener('submit', handleSubmitName);
 
-
+// Variables
 var playersData = [];
-var codeBlockWithAnswers = [];
-var currentPLayer = 0;
+var currentPLayerIndex;
 var currentPlayerName;
-var date = new Date();
 
-
-// Constructor Function for CodeBlockPair with Answers
-function CodeBlockPair(codeBlockImg, answer) {
-  this.codeBlockImg = codeBlockImg;
-  this.answer = answer;
-  codeBlockWithAnswers.push(this);
+function saveToLocalStorage() {
+  var savedPlayers = JSON.stringify(playersData);
+  localStorage.setItem('PlayerData', savedPlayers);
+  localStorage.setItem('currentPlayerIndex', `${currentPLayerIndex}`);
+  localStorage.setItem('currentPlayerName', currentPlayerName);
 }
 
-new CodeBlockPair('./codeBlock-images/Answer4.png', [4]);
-new CodeBlockPair('./codeBlock-images/Answer8.png', [8]);
-new CodeBlockPair('./codeBlock-images/Answer12.png', [12]);
-new CodeBlockPair('./codeBlock-images/Answer16.png', [16]);
-new CodeBlockPair('./codeBlock-images/Answer21.png', [21]);
+function loadLocalStorage() {
+  if (localStorage.getItem('PlayerData')) {
+    currentPLayerIndex = +localStorage.getItem('currentPlayerIndex');
+    currentPlayerName = localStorage.getItem('currentPlayerName');
+    playersData = JSON.parse(localStorage.getItem('PlayerData'));
+  }
+}
 
-
-// Constructor Function to Create New Player Object
+// Declare New PLayer Object
 function Player(name) {
   this.name = name.toLowerCase();
   this.session = [];
   playersData.push(this);
 }
 
-// Testing Player Constructor
-new Player('Ben');
-new Player('Davee');
-new Player('Taylor');
-
-
-// Constructor Function to Create New Session Object
-function Session(day) {
-  this.day = day;
+// Declare New Player Session
+function Session() {
+  this.day = new Date();
   this.attempts = 0;
   this.correctAttempts = 0;
-  playersData[currentPLayer].session.push(this);
+  playersData[currentPLayerIndex].session.push(this);
 }
-
-function handleSubmitName(event) {
-  event.preventDefault();
-  currentPlayerName = event.target.name.value;
-  currentPlayerName = currentPlayerName.toLowerCase();
-}
-
-var userName = document.getElementById('userForm');
-userName.addEventListener('submit', handleSubmitName);
-
 
 function checkIfUserHasPlayed(name) {
   var playerPresent = false;
+  currentPLayerIndex = playersData.length;
   for (var i = 0; i < playersData.length; i++) {
     if (name === playersData[i].name) {
       playerPresent = true;
+      currentPLayerIndex = i;
       break;
     }
   }
   return playerPresent;
 }
 
+function addPlayerToData(currentPlayerName) {
+  if (checkIfUserHasPlayed(currentPlayerName)) {
+    new Session();
+  } else {
+    new Player(currentPlayerName);
+    new Session();
+  }
+}
+
+function handleSubmitName(event) {
+  event.preventDefault();
+  currentPlayerName = event.target.name.value;
+  currentPlayerName = currentPlayerName.toLowerCase();
+  addPlayerToData(currentPlayerName);
+  saveToLocalStorage();
+  window.location.replace('html/game.html');
+}
+
+loadLocalStorage();

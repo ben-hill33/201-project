@@ -44,3 +44,12 @@ section {
   border: 1px solid blue;
 }
 
+#resultMessageContainer {
+  width: 300px;
+  height: 100px;
+  border: 2px solid red;
+}
+
+#nextButton {
+  visibility: hidden;
+}
