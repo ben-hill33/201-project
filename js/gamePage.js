@@ -9,7 +9,7 @@ var nextButton = document.getElementById('nextButton');
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
-// nextButton.addEventListener('click', handleNextQuestion);
+nextButton.addEventListener('click', handleNextQuestion);
 
 var codeBlockWithAnswers = [];
 var currentCodeBlock;
@@ -49,9 +49,10 @@ function handleSubmitAnswer(event) {
   var userAnswer = +event.target.userAnswer.value;
   var playerSessionArray = playersData[currentPLayerIndex].session;
   var currentSession = playerSessionArray[playerSessionArray.length - 1];
-  console.log(currentCodeBlock.answer, userAnswer);
+
   if (currentCodeBlock.answer.includes(userAnswer)) {
     currentSession.correctAttempts++;
+
     resultMessage.innerHTML = 'Correct!!';
     resultMessage.style.color = 'green';
   } else {
@@ -59,12 +60,12 @@ function handleSubmitAnswer(event) {
     resultMessage.style.color = 'red';
   }
   currentSession.attempts++;
+  playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   enterButton.style.visibility = 'hidden';
   nextButton.style.visibility = 'visible';
-
-  console.log('CurrentSession: ', currentSession);
+  saveToLocalStorage();
 }
 
-// function handleNextQuestion(event) {}
+function handleNextQuestion(event) {}
 
 initializeGame();

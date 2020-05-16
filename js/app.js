@@ -17,7 +17,7 @@ function saveToLocalStorage() {
 
 function loadLocalStorage() {
   if (localStorage.getItem('PlayerData')) {
-    currentPLayerIndex = +localStorage.getItem('currentPLayerIndex');
+    currentPLayerIndex = +localStorage.getItem('currentPlayerIndex');
     currentPlayerName = localStorage.getItem('currentPlayerName');
     playersData = JSON.parse(localStorage.getItem('PlayerData'));
   }
