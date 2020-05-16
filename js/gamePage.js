@@ -7,6 +7,8 @@ var resultMessage = document.getElementById('resultMessage');
 var enterButton = document.getElementById('enterButton');
 var nextButton = document.getElementById('nextButton');
 var timeBlock = document.getElementById('counter');
+var statusBar = document.getElementById('correct-bars');
+
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
@@ -54,9 +56,11 @@ function handleSubmitAnswer(event) {
   var playerSessionArray = playersData[currentPLayerIndex].session;
   var currentSession = playerSessionArray[playerSessionArray.length - 1];
 
+
   if (currentCodeBlock.answer.includes(userAnswer)) {
     currentSession.correctAttempts++;
-    /// Increment Status Bar HERE
+    // Increment Status Bar HERE
+    addElementToPage('li', '  ', statusBar);
     resultMessage.textContent = 'Correct!!';
     resultMessage.style.color = 'green';
     timeBlock.style.visibility = 'hidden';
@@ -91,7 +95,7 @@ function timer(seconds) {
     if (timeleft <= 0) {
       clearInterval(gameTimer);
       resultMessage.style.color = 'red';
-      resultMessage.textContent = "Time's up!";
+      resultMessage.textContent = 'Time\'s up';
       enterButton.style.visibility = 'hidden';
       nextButton.style.visibility = 'visible';
     } else {
@@ -100,5 +104,12 @@ function timer(seconds) {
     timeleft--;
   }, 1000);
 }
+
+function addElementToPage(elementType, content, parentEl) {
+  var newEl = document.createElement(elementType);
+  newEl.textContent = content;
+  parentEl.appendChild(newEl);
+}
+
 
 initializeGame();

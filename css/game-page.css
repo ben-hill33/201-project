@@ -27,14 +27,14 @@ main {
   font-family: 'Rajdhani', sans-serif;
 }
 
-/* #status-bar {
-  width: 220px;
-  height: 700px;
+#status-bar {
+  width: 700px;
+  height: 200px;
   margin: 10px 20px 10px 10px;
   float: left;
-  /* overflow: auto; */
-  /* border: 1px solid purple; */
-/* } */
+  overflow: auto;
+  border: 1px solid purple;
+}
 
 
 #resultMessageContainer {
@@ -136,4 +136,11 @@ label {
 form input {
   width: 75%;
   margin-top: 5px;
+}
+
+#correct-bars>li {
+  background-color: #006599;
+  width: 200px;
+  height: 20px;
+  margin: 0px auto;
 }
