@@ -40,15 +40,6 @@ userAnswerForm.addEventListener('submit', handleSubmitAnswer);
 var resultMessage = document.getElementById('resultMessage');
 
 function handleSubmitAnswer(event) {
-  // when user hits enter
-  // save answer into a variable answer
-  // check if the answer is one of the correct answers
-  // increment correct answers
-  // display correct answer message
-  // otherwise
-  // display incorrect answer message
-
-  // increment attempts
   event.preventDefault();
   var userAnswer = +event.target.userAnswer.value;
   var playerSessionArray = playersData[currentPLayerIndex].session;
@@ -57,8 +48,10 @@ function handleSubmitAnswer(event) {
   if (currentCodeBlock.answer.includes(userAnswer)) {
     currentSession.correctAttempts++;
     resultMessage.innerHTML = 'Correct!!';
+    resultMessage.style.color = 'green';
   } else {
     resultMessage.innerHTML = 'INCORRECT!!';
+    resultMessage.style.color = 'red';
   }
   currentSession.attempts++;
   console.log('CurrentSession: ', currentSession);
