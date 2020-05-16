@@ -1,3 +1,79 @@
 #hideThisButton {
   visibility: hidden;
 }
+
+nav {
+	text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-flex;
+}
+
+nav ul {
+  display: inline-flex;
+  align-content: space-around;
+  justify-content: space-evenly;
+}
+
+nav li {
+  display: inline;
+  font-family: 'Rajdhani', sans-serif;
+  margin-right: 50px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+  display: inline-flex;
+  background-color: white
+}
+
+.shrink:hover
+{
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+}
+
+a:hover {
+  color: orange;
+}
+
+.grow:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+}
+
+/* form  */
+button {
+  border: 0;
+  background: orangered;
+  border-radius: 4px;
+  box-shadow: 0 10px 0 orange;
+  color: black;
+  cursor: pointer;
+  font: inherit;
+  margin: 15px auto;
+  outline: 0;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+
+button, input, select, textarea {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 100%;
+}
+
+label {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 25px;
+}
+
+form input {
+  width: 50%;
+  margin-top: 10px;
+}

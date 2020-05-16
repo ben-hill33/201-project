@@ -4,40 +4,41 @@
     <link href="/css/reset.css" type="text/css" rel="stylesheet" />
     <link href="/css/style.css" type="text/css" rel="stylesheet" />
     <link href="/css/game-page.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
     <title>Game Page</title>
   </head>
 
   <body>
     <header>
-      <ul>
-        <li><a href="../index.html">Main Page</a></li>
-        <li><a href="result.html">Result Page</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-      </ul>
+     
     </header>
 
     <main>
-      <h1>Game Page</h1>
-      <div id="timer">
-        <h2 id="counter"></h2>
+      <h1>Can_you_spot_the_syntax <span>_Error?</span></h1>
+
+      <div class = "timerDisplay" id="timer">
+        <h2 id="counter">timer</h2>
       </div>
 
-      <div id="resultMessageContainer">
-        <h1 id="resultMessage"></h1>
+      <div class = "resultDisplay" id="resultMessageContainer">
+        <h2 id="resultMessage">result</h2>
       </div>
 
       <section>
         <div id="code-block">
           <h2>Code Block</h2>
-          <img id="codeBlock-img" title="" alt="" src="" />
+          <!-- <img id="codeBlock-img" title="" alt="" src="" /> -->
         </div>
 
-        <div id="status-bar">
+        <!-- <div id="status-bar">
           <h2>Status Bar</h2>
-        </div>
+        </div> -->
       </section>
 
-      <div id="user-input-box">
+        <div class = "inputBoxDisplay" id="user-input-box">
         <form id="userAnswerForm">
           <label>What Line is the error on?</label>
           <input id="userAnswer" type="number" placeholder="Enter a number" required />
@@ -46,19 +47,29 @@
         </form>
       </div>
 
-      <div id="nextButtonContainer">
+      <div class = "nextButtonDisplay" id="nextButtonContainer">
         <button id="nextButton">Click for next Question</button>
       </div>
 
-      <div id="see-results">
-        <a href="result.html">
-          <h2>See Your Results</h2>
+      <div class = "goToResults" id="see-results">
+        <a href="result.html">See Your Results</a>
         </a>
       </div>
+
     </main>
 
     <footer>
-      <h1>footer</h1>
+      <nav>
+        <ul class = "shrink">
+          <li><a href="/index.html">homePage</a></li>
+        </ul>
+        <ul class = "shrink">
+          <li><a href="/html/result.html">resultsPage</a></li>
+        </ul>
+        <ul class = "shrink">
+          <li><a href="/html/about-us.html">aboutTheDevelopers</a></li>
+        </ul>
+      </nav>
     </footer>
     <script src="../js/app.js"></script>
     <script src="../js/gamePage.js"></script>
