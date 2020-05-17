@@ -1,24 +1,29 @@
 #timer {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 75px;
   margin: 20px auto;
   overflow: auto;
+  font-family: 'Rajdhani', sans-serif;
+  float: left;
 }
 
 main {
   width: 960px;
   height: 600px;
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
-
 #code-block {
-  width: 700px;
-  height: 200px;
-  margin: 150px;
+  width: 350px;
+  height: 350px;
+  margin-left: 280px;
+  margin-top: 30px;
   /* overflow: auto; */
 }
 
+h3 {
+  font-size: 20pt;
+}
 .goToResults {
   height:25px;
   width:125px;
@@ -28,19 +33,20 @@ main {
 }
 
 #status-bar {
-  width: 700px;
-  height: 200px;
-  margin: 10px 20px 10px 10px;
-  float: left;
+  width: 960px;
+  height: 50px;
+  margin: 10px auto;
+  margin-bottom: 10px
   overflow: auto;
   border: 1px solid purple;
 }
 
 
 #resultMessageContainer {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 75px;
   float: right;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 #nextButton {
@@ -53,20 +59,18 @@ main {
   font-family: 'Rajdhani', sans-serif;
 }
 
-.timerDisplay {
-  float: left;
-}
 
 .inputBoxDisplay {
   width: 300px;
-  height: 110px;
+  height: 50px;
   float: left;
-  margin-top: -125px;
-  margin-left: 325px;
+  margin-left: 310px;
+  margin-top: 5px;
+
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 nav {
