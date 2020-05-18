@@ -46,7 +46,7 @@ h3 {
 
 #correct-bars li {
   background-color: rgb(43, 255, 0);
-  width: 80px;
+  width: 70px;
   height: 75px;
   display: inline-block;
   float: left;
@@ -93,9 +93,14 @@ h3 {
 }
 
 .inputBoxDisplay {
-  width: 500px;
+  width: 600px;
   height: 100px;
   padding: 10px 0px;
+  margin-top: 20px;
+}
+
+#enterButton {
+  color: white;
 }
 
 #nextButtonContainer {
@@ -104,6 +109,7 @@ h3 {
 
 #nextButton {
   visibility: hidden;
+  color: rgb(237, 228, 228);
   width: 250px;
   height: 50px;
   font-family: 'Rajdhani', sans-serif;
@@ -154,7 +160,7 @@ a:hover {
 button {
   width: 150px;
   border: 0;
-  background: orangered;
+  background: rgb(164, 48, 6);
   border-radius: 4px;
   box-shadow: 0 10px 0 orange;
   color: black;
