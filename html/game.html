@@ -1,83 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
-    <link href="/css/style.css" type="text/css" rel="stylesheet" />
-    <link href="/css/game-page.css" type="text/css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
-    <title>Game Page</title>
-  </head>
 
-  <body>
-    <header>
-     
-    </header>
+<head>
+  <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+  <link href="/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="/css/game-page.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
+  <title>Game Page</title>
+</head>
 
-    <main>
-      <h1>Can_you_spot_the_syntax <span>_Error?</span></h1>
+<body>
+  <header>
+    <h1>
+      Can_You_Spot_the_Syntax<br />
+      <span>Error?</span>
+    </h1>
+  </header>
 
-      <div id="status-bar">
-        <h2>Status Bar</h2>
-        <ul id="correct-bars">
-          <!-- List elements created in gamePage.JS -->
-        </ul>
+  <main>
+
+    <div id="status-bar">
+      <h2>Status<br>
+        Bar</h2>
+      <ul id="correct-bars">
+        <li>Bar 1</li>
+        <li>Bar 2</li>
+        <li>Bar 3</li>
+      </ul>
+    </div>
+
+    <div class="timerDisplay" id="timer">
+      <h3 id="counter">timer</h3>
+    </div>
+
+    <div class="resultDisplay" id="resultMessageContainer">
+      <h3 id="resultMessage">result</h3>
+    </div>
+
+    <section>
+
+      <div class="codeBlockDisplay" id="code-block">
+        <h2>Code Block</h2>
+        <img id="codeBlock-img" width="400" title="" alt="" src="" />
       </div>
 
-      <div class = "timerDisplay" id="timer">
-        <h3 id="counter">timer</h3>
-      </div>
-
-      <div class = "resultDisplay" id="resultMessageContainer">
-        <h3 id="resultMessage">result</h3>
-      </div>
-
-      <section>
-        <div class = "codeBlockDisplay" id="code-block">
-          <h2>Code Block</h2>
-          <img id="codeBlock-img" width = "250" height = "250" title="" alt="" src="" />
-        </div>
-
-      </section>
+    </section>
 
 
 
-        <div class = "inputBoxDisplay" id="user-input-box">
-        <form id="userAnswerForm">
-          <label>What Line is the error on?</label>
-          <input id="userAnswer" type="number" placeholder="Enter a number" required />
-          <br />
-          <button id="enterButton" type="submit">Enter</button>
-        </form>
-      </div>
+    <div class="inputBoxDisplay" id="user-input-box">
+      <form id="userAnswerForm">
+        <label>What Line is the error on?</label>
+        <input id="userAnswer" type="number" placeholder="Enter a number" required />
+        <br />
+        <button id="enterButton" type="submit">Enter</button>
+      </form>
+    </div>
 
-      <div class = "nextButtonDisplay" id="nextButtonContainer">
-        <button id="nextButton">Click for next Question</button>
-      </div>
+    <div class="nextButtonDisplay" id="nextButtonContainer">
+      <button id="nextButton">Click for next Question</button>
+    </div>
 
-      <div class = "goToResults" id="see-results">
-        <a href="result.html">See Your Results</a>
-        </a>
-      </div>
+    <div class="goToResults" id="see-results">
+      <a href="result.html">See Your Results</a>
+      </a>
+    </div>
 
-    </main>
+  </main>
 
-    <footer>
-      <nav>
-        <ul class = "shrink">
-          <li><a href="/index.html">homePage</a></li>
-        </ul>
-        <ul class = "shrink">
-          <li><a href="/html/result.html">resultsPage</a></li>
-        </ul>
-        <ul class = "shrink">
-          <li><a href="/html/about-us.html">aboutTheDevelopers</a></li>
-        </ul>
-      </nav>
-    </footer>
-    <script src="../js/app.js"></script>
-    <script src="../js/gamePage.js"></script>
-  </body>
+  <footer>
+    <nav>
+      <ul class="shrink">
+        <li><a href="/index.html">homePage</a></li>
+      </ul>
+      <ul class="shrink">
+        <li><a href="/html/result.html">resultsPage</a></li>
+      </ul>
+      <ul class="shrink">
+        <li><a href="/html/about-us.html">aboutTheDevelopers</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+
+  <script src="../js/app.js"></script>
+  <script src="../js/gamePage.js"></script>
+</body>
+
 </html>

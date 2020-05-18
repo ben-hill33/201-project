@@ -3,7 +3,7 @@
 }
 
 nav {
-	text-align: center;
+  text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
   display: inline-flex;
@@ -26,25 +26,24 @@ nav li {
   background-color: white
 }
 
-.shrink:hover
-{
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
+.shrink:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 a:hover {
   color: orange;
 }
 
-.grow:hover
-{
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* form  */
+
 button {
   border: 0;
   background: orangered;
@@ -58,6 +57,7 @@ button {
   padding: 12px 20px;
   transition: all .1s linear;
 }
+
 button:active {
   box-shadow: 0 2px 0 #006599;
   transform: translateY(3px);
@@ -76,4 +76,21 @@ label {
 form input {
   width: 50%;
   margin-top: 10px;
+}
+
+#gameInstructions>h2 {
+  padding: 15px;
+}
+
+#gameInstructions>p {
+  padding-bottom: 40px;
+  line-height: 1.2em;
+}
+
+div {
+  /* width: 800px;
+  height: 220px; */
+  margin: 20px auto;
+  text-align: center;
+  background-color: white;
 }
