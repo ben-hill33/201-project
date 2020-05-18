@@ -1,6 +1,12 @@
+div {
+  margin: 20px auto;
+  text-align: center;
+  background-color: white;
+}
+
 #enterData {
   width: 800px;
-  height: 500px;
+  min-height: 500px;
   margin: 20px auto;
   border: 1px solid green;
 }
@@ -27,12 +33,16 @@ td {
 
 main {
   width: 960px;
-  height: 600px;
+  min-height: 600px;
   margin: 10px auto;
 }
 
+div {
+  min-height: 600px;
+}
+
 nav {
-	text-align: center;
+  text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
   display: inline-flex;
@@ -55,14 +65,12 @@ nav li {
   background-color: white
 }
 
-.shrink:hover
-{
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
+.shrink:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 footer {
   margin-top: 50px;
 }
-

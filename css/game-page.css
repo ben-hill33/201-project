@@ -1,80 +1,130 @@
-#timer {
-  width: 200px;
+main {
+  width: 960px;
+  min-height: 600px;
+  margin: 10px auto;
+  /* border: 3px solid orange; */
+}
+
+div {
+  margin: 10px auto;
+  text-align: center;
+  background-color: white;
+}
+
+h3 {
+  font-size: 35px;
+  padding: 25px 10px;
+}
+
+#statusBarContainer {
+  width: 960px;
+  height: 80px;
+  margin: 15px auto;
+  overflow: auto;
+}
+
+#statusBarContainer>h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  width: 100px;
+  height: 85px;
+  margin-top: 0px;
+  padding-top: 10px;
+  float: left;
+  overflow: auto;
+  /* border: 1px solid blue; */
+}
+
+#barContainer {
+  width: 750px;
+  height: 80px;
+  margin-top: 0px;
+  float: left;
+  overflow: auto;
+}
+
+#correct-bars li {
+  background-color: rgb(43, 255, 0);
+  width: 70px;
   height: 75px;
-  margin: 20px auto;
+  display: inline-block;
+  float: left;
+  margin: 2px;
+}
+
+#nextLevel {
+  float: right;
+}
+
+#timer {
+  width: 160px;
+  height: 160px;
+  margin: 5px auto;
   overflow: auto;
   font-family: 'Rajdhani', sans-serif;
   float: left;
 }
 
-main {
-  width: 960px;
-  height: 600px;
-  margin: 20px auto;
+#code-block>h2 {
+  font-family: 'Rajdhani', sans-serif;
+  padding-top: 5px;
 }
 
 #code-block {
-  width: 350px;
-  height: 350px;
-  margin-left: 280px;
-  margin-top: 30px;
-  /* overflow: auto; */
+  width: 600px;
+  min-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
-
-h3 {
-  font-size: 20pt;
-}
-.goToResults {
-  height:25px;
-  width:125px;
-  float: right;
-  margin-top: -25px;
-  font-family: 'Rajdhani', sans-serif;
-}
-
-#status-bar {
-  width: 960px;
-  height: 50px;
-  margin: 10px auto;
-  margin-bottom: 10px
-  overflow: auto;
-  border: 1px solid purple;
-}
-
 
 #resultMessageContainer {
-  width: 200px;
-  height: 75px;
+  width: 160px;
+  height: 160px;
+  margin: 5px auto;
   float: right;
   font-family: 'Rajdhani', sans-serif;
+  overflow: auto;
+}
+
+#resultMessage {
+  color: white;
+}
+
+.inputBoxDisplay {
+  width: 600px;
+  height: 100px;
+  padding: 10px 0px;
+  margin-top: 20px;
+}
+
+#enterButton {
+  color: white;
+}
+
+#nextButtonContainer {
+  background-color: transparent;
 }
 
 #nextButton {
   visibility: hidden;
-  width: 100px;
-  height: 75px;
-  float: right;
-  display: inline-flex;
-  margin-top: -125px;
+  color: rgb(237, 228, 228);
+  width: 250px;
+  height: 50px;
   font-family: 'Rajdhani', sans-serif;
 }
 
-
-.inputBoxDisplay {
-  width: 300px;
+.goToResults {
   height: 50px;
-  float: left;
-  margin-left: 310px;
-  margin-top: 5px;
-
-}
-
-footer {
-  margin-top: 100px;
+  width: 150px;
+  padding-top: 25px;
+  margin-top: 20px;
+  font-family: 'Rajdhani', sans-serif;
 }
 
 nav {
-	text-align: center;
+  text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
   display: inline-flex;
@@ -97,11 +147,10 @@ nav li {
   background-color: white
 }
 
-.shrink:hover
-{
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
+.shrink:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 a:hover {
@@ -109,8 +158,9 @@ a:hover {
 }
 
 button {
+  width: 150px;
   border: 0;
-  background: orangered;
+  background: rgb(164, 48, 6);
   border-radius: 4px;
   box-shadow: 0 10px 0 orange;
   color: black;
@@ -142,9 +192,11 @@ form input {
   margin-top: 5px;
 }
 
-#correct-bars>li {
-  background-color: #006599;
-  width: 200px;
-  height: 20px;
-  margin: 0px auto;
+footer {
+  margin-top: 100px;
+}
+
+h4 {
+  font-size: 40px;
+  padding: 30px;
 }

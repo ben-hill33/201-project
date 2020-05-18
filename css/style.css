@@ -1,24 +1,23 @@
 body {
-  background: 
-  url("/img/blurred.png") fixed; 
+  background: url("/img/blurred.png") fixed;
 }
 
 footer {
   background-color: blue;
-  margin-top: 50px; 
+  margin-top: 50px;
 }
-
 
 main {
   width: 960px;
-  height: 600px;
-  margin: 10px auto;
+  min-height: 600px;
+  margin: 5px auto;
 }
 
 /* name of game */
+
 h1 {
   font-family: 'Monofett', cursive;
-  margin-top: 40px;
+  margin-top: 10px;
   text-align: center;
   font-size: 60px;
   color: blue;
@@ -26,21 +25,23 @@ h1 {
 }
 
 span {
-  color: red; 
+  color: red;
 }
 
 /* instructions & form  */
+
 h2 {
   margin: 10px auto;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   margin: 20px auto;
   font-family: 'Monofett', cursive;
   background-color: white;
-  color:  #da0078;
+  color: #da0078;
 }
 
 /* game instructions copy */
+
 p {
   margin: 10px auto;
   max-width: 500px;
@@ -48,12 +49,3 @@ p {
   font-family: 'Rajdhani', sans-serif;
   font-size: 20px;
 }
-
-div {
-  /* width: 800px;
-  height: 220px; */
-  margin: 20px auto;
-  text-align: center;
-  background-color: white;
-}
-
