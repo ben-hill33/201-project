@@ -22,29 +22,29 @@
 
   <main>
 
-    <div id="status-bar">
+    <div id="statusBarContainer">
       <h2>Status<br>
         Bar</h2>
-      <ul id="correct-bars">
-        <li>Bar 1</li>
-        <li>Bar 2</li>
-        <li>Bar 3</li>
-      </ul>
+      <div id="barContainer">
+        <ul id="correct-bars">
+        </ul>
+      </div>
+      <h2 id="nextLevel">Next Level</h2>
     </div>
 
     <div class="timerDisplay" id="timer">
-      <h3 id="counter">timer</h3>
+      <h3 id="counter">Timer</h3>
     </div>
 
     <div class="resultDisplay" id="resultMessageContainer">
-      <h3 id="resultMessage">result</h3>
+      <h3 id="resultMessage"></h3>
     </div>
 
     <section>
 
       <div class="codeBlockDisplay" id="code-block">
         <h2>Code Block</h2>
-        <img id="codeBlock-img" width="400" title="" alt="" src="" />
+        <img id="codeBlock-img" width="500" title="" alt="" src="" />
       </div>
 
     </section>
@@ -60,9 +60,11 @@
       </form>
     </div>
 
+
     <div class="nextButtonDisplay" id="nextButtonContainer">
       <button id="nextButton">Click for next Question</button>
     </div>
+
 
     <div class="goToResults" id="see-results">
       <a href="result.html">See Your Results</a>

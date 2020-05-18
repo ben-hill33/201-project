@@ -8,6 +8,7 @@ var enterButton = document.getElementById('enterButton');
 var nextButton = document.getElementById('nextButton');
 var timeBlock = document.getElementById('counter');
 var statusBar = document.getElementById('correct-bars');
+var resultMessageContainer = document.getElementById('resultMessageContainer');
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
@@ -91,15 +92,15 @@ function handleSubmitAnswer(event) {
     currentSession.correctAttempts++;
     // Increment Status Bar HERE
     addElementToPage('li', '  ', statusBar);
-    resultMessage.textContent = 'Correct!!';
-    resultMessage.style.color = 'green';
+    resultMessage.textContent = 'CORRECT!!';
+    resultMessageContainer.style.backgroundColor = 'rgb(27, 164, 0';
     timeBlock.style.visibility = 'hidden';
     enterButton.style.visibility = 'hidden';
     nextButton.style.visibility = 'visible';
     clearInterval(gameTimer);
   } else {
-    resultMessage.textContent = 'INCORRECT!! Try Again';
-    resultMessage.style.color = 'red';
+    resultMessage.textContent = 'WRONG!! Try Again';
+    resultMessageContainer.style.backgroundColor = 'red';
   }
   currentSession.attempts++;
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
@@ -116,6 +117,7 @@ function handleNextQuestionButton(event) {
   nextButton.style.visibility = 'hidden';
   enterButton.style.visibility = 'visible';
   resultMessage.textContent = '';
+  resultMessageContainer.style.backgroundColor = 'white';
 }
 
 function timer(seconds) {
@@ -129,7 +131,7 @@ function timer(seconds) {
       enterButton.style.visibility = 'hidden';
       nextButton.style.visibility = 'visible';
     } else {
-      timeBlock.textContent = timeleft + ' seconds remaining';
+      timeBlock.textContent = timeleft + ' Seconds left';
     }
     timeleft--;
   }, 1000);

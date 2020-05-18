@@ -10,7 +10,7 @@ footer {
 main {
   width: 960px;
   min-height: 600px;
-  margin: 10px auto;
+  margin: 5px auto;
 }
 
 /* name of game */
@@ -33,7 +33,7 @@ span {
 h2 {
   margin: 10px auto;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   margin: 20px auto;
   font-family: 'Monofett', cursive;
   background-color: white;
@@ -48,12 +48,4 @@ p {
   text-align: center;
   font-family: 'Rajdhani', sans-serif;
   font-size: 20px;
-}
-
-div {
-  /* width: 800px;
-  height: 220px; */
-  /* margin: 20px auto;
-  text-align: center;
-  background-color: white; */
 }

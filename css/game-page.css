@@ -1,87 +1,119 @@
 main {
   width: 960px;
-  height: 600px;
-  margin: 20px auto;
+  min-height: 600px;
+  margin: 10px auto;
   /* border: 3px solid orange; */
 }
 
 div {
-  /* width: 800px;
-  height: 220px; */
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   background-color: white;
 }
 
 h3 {
-  font-size: 20pt;
+  font-size: 35px;
+  padding: 25px 10px;
 }
 
-#status-bar {
-  width: 500px;
-  height: 100px;
-  margin: 10px auto;
-  margin-bottom: 10px;
-  overflow: auto;
-  border: 1px solid purple;
-}
-
-#status-bar>h2 {
-  font-size: 30px;
-  text-align: left;
-  width: 80px;
+#statusBarContainer {
+  width: 960px;
   height: 80px;
+  margin: 15px auto;
+  overflow: auto;
+}
+
+#statusBarContainer>h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  width: 100px;
+  height: 85px;
+  margin-top: 0px;
+  padding-top: 10px;
   float: left;
+  overflow: auto;
+  /* border: 1px solid blue; */
+}
+
+#barContainer {
+  width: 750px;
+  height: 80px;
+  margin-top: 0px;
+  float: left;
+  overflow: auto;
+}
+
+#correct-bars li {
+  background-color: rgb(43, 255, 0);
+  width: 80px;
+  height: 75px;
+  display: inline-block;
+  float: left;
+  margin: 2px;
+}
+
+#nextLevel {
+  float: right;
 }
 
 #timer {
-  width: 200px;
-  height: 75px;
-  margin: 20px auto;
+  width: 160px;
+  height: 160px;
+  margin: 5px auto;
   overflow: auto;
   font-family: 'Rajdhani', sans-serif;
   float: left;
 }
 
+#code-block>h2 {
+  font-family: 'Rajdhani', sans-serif;
+  padding-top: 5px;
+}
+
 #code-block {
-  width: 500px;
+  width: 600px;
   min-height: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
-  /* overflow: auto; */
+  margin-top: 10px;
 }
 
 #resultMessageContainer {
-  width: 200px;
-  height: 75px;
+  width: 160px;
+  height: 160px;
+  margin: 5px auto;
   float: right;
   font-family: 'Rajdhani', sans-serif;
+  overflow: auto;
+}
+
+#resultMessage {
+  color: white;
 }
 
 .inputBoxDisplay {
-  width: 300px;
-  height: 50px;
-  /* float: left; */
-  /* margin-left: 330px; */
-  margin-top: 5px;
+  width: 500px;
+  height: 100px;
+  padding: 10px 0px;
 }
 
-.goToResults {
-  height: 25px;
-  width: 125px;
-  float: right;
-  margin-top: -25px;
-  font-family: 'Rajdhani', sans-serif;
+#nextButtonContainer {
+  background-color: transparent;
 }
 
 #nextButton {
   visibility: hidden;
-  width: 100px;
-  height: 75px;
-  float: right;
-  display: inline-flex;
-  margin-top: -125px;
+  width: 250px;
+  height: 50px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.goToResults {
+  height: 50px;
+  width: 150px;
+  padding-top: 25px;
+  margin-top: 20px;
   font-family: 'Rajdhani', sans-serif;
 }
 
@@ -120,6 +152,7 @@ a:hover {
 }
 
 button {
+  width: 150px;
   border: 0;
   background: orangered;
   border-radius: 4px;
@@ -155,10 +188,4 @@ form input {
 
 footer {
   margin-top: 100px;
-}
-
-#correct-bars>li {
-  background-color: #006599;
-  display: inline;
-  text-align: left;
 }
