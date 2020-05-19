@@ -18,10 +18,10 @@ function createRowElement() {
 function createHeading() {
   createRowElement();
   addElementToPage('th', 'Name', trEl);
-  addElementToPage('th', 'Date', trEl);
+  addElementToPage('th', 'Game Session Date', trEl);
   addElementToPage('th', 'Attempts', trEl);
   addElementToPage('th', 'Correct Answers', trEl);
-  addElementToPage('th', 'Correct Ratio', trEl);
+  addElementToPage('th', 'Correct Answers Ratio', trEl);
 }
 
 function renderRows() {
