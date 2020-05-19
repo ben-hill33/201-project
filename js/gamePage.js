@@ -114,7 +114,7 @@ function handleSubmitAnswer(event) {
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   saveToLocalStorage();
   event.target.userAnswer.value = '';
-  if (currentSession.correctAttempts >= 3) {
+  if (currentSession.correctAttempts >= 10) {
     displayCongratsMessage();
   }
 }
@@ -161,6 +161,6 @@ function displayCongratsMessage() {
   main.style.display = 'none';
   goToResultPageContainer.style.width = '500px';
   goToResultPageContainer.style.height = '250px';
-  congratsMessage.textContent = 'Congratulations!! You leveled up!! See Your Daily Score and come back next time!!';
+  congratsMessage.textContent = 'Congratulations!! You Found our Errors!!';
 }
 
