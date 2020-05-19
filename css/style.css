@@ -2,15 +2,6 @@ body {
   background: url("/img/blurred.png") fixed;
 }
 
-footer {
-  background-color: blue;
-  margin-top: 50px;
-  /* width: 960px; */
-  min-height: 60px;
-  margin: 0px;
- 
-}
-
 main {
   width: 960px;
   min-height: 600px;
@@ -46,9 +37,20 @@ h2 {
 /* game instructions copy */
 
 p {
-  margin: 10px auto;
+  margin: 5px auto;
   max-width: 500px;
   text-align: center;
   font-family: 'Rajdhani', sans-serif;
   font-size: 20px;
+}
+
+footer {
+  background-color: blue;
+  margin-top: 50px;
+  min-height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }

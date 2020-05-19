@@ -9,14 +9,9 @@ var nextButton = document.getElementById('nextButton');
 var timeBlock = document.getElementById('counter');
 var statusBar = document.getElementById('correct-bars');
 var resultMessageContainer = document.getElementById('resultMessageContainer');
-var timerContainer = document.getElementById('timer');
-var codeBlockContainer = document.getElementById('code-block');
-var userInputBoxContainer = document.getElementById('user-input-box');
-var nextButtonContainer = document.getElementById('nextButtonContainer');
 var congratsMessage = document.getElementById('congratsMessage');
 var main = document.getElementById('main');
 var goToResultPageContainer = document.getElementById('see-results');
-
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
@@ -98,7 +93,6 @@ function handleSubmitAnswer(event) {
 
   if (currentCodeBlock.answer.includes(userAnswer)) {
     currentSession.correctAttempts++;
-    // Increment Status Bar HERE
     addElementToPage('li', '  ', statusBar);
     resultMessage.textContent = 'CORRECT!!';
     resultMessageContainer.style.backgroundColor = 'rgb(27, 164, 0';
