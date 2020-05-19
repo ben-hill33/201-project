@@ -71,13 +71,20 @@ function randomizer(max) {
   return Math.floor(Math.random() * max);
 }
 
+
+var previousIndex;
 // create a function to randomize array of codeblocks
 function displayRandomCodeBlock() {
   var codeBlockIndex = randomizer(codeBlockWithAnswers.length);
+  while (previousIndex === codeBlockIndex) {
+    codeBlockIndex = randomizer(codeBlockWithAnswers.length);
+  }
   currentCodeBlock = codeBlockWithAnswers[codeBlockIndex];
   var image = currentCodeBlock.codeBlockImg;
   codeBlock.src = image;
+  previousIndex = codeBlockIndex;
 }
+
 
 function initializeGame() {
   loadLocalStorage();
@@ -85,12 +92,12 @@ function initializeGame() {
   timer(60);
 }
 
+
 function handleSubmitAnswer(event) {
   event.preventDefault();
   var userAnswer = +event.target.userAnswer.value; //plus is the same as parseInt
   var playerSessionArray = playersData[currentPLayerIndex].session;
   var currentSession = playerSessionArray[playerSessionArray.length - 1];
-
   if (currentCodeBlock.answer.includes(userAnswer)) {
     currentSession.correctAttempts++;
     addElementToPage('li', '  ', statusBar);
@@ -113,6 +120,7 @@ function handleSubmitAnswer(event) {
   }
 }
 
+
 function handleNextQuestionButton(event) {
   event.preventDefault();
   timeBlock.textContent = '';
@@ -124,6 +132,7 @@ function handleNextQuestionButton(event) {
   resultMessage.textContent = '';
   resultMessageContainer.style.backgroundColor = 'white';
 }
+
 
 function timer(seconds) {
   var timeleft = seconds;
@@ -142,13 +151,12 @@ function timer(seconds) {
   }, 1000);
 }
 
+
 function addElementToPage(elementType, content, parentEl) {
   var newEl = document.createElement(elementType);
   newEl.textContent = content;
   parentEl.appendChild(newEl);
 }
-
-initializeGame();
 
 
 function displayCongratsMessage() {
@@ -158,3 +166,4 @@ function displayCongratsMessage() {
   congratsMessage.textContent = 'Congratulations!! You Found our Errors!!';
 }
 
+initializeGame();
