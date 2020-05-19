@@ -19,8 +19,8 @@ function createHeading() {
   createRowElement();
   addElementToPage('th', 'Name', trEl);
   addElementToPage('th', 'Game Session Date', trEl);
-  addElementToPage('th', 'Attempts', trEl);
   addElementToPage('th', 'Correct Answers', trEl);
+  addElementToPage('th', 'Attempts', trEl);
   addElementToPage('th', 'Correct Answers Ratio', trEl);
 }
 
@@ -34,8 +34,8 @@ function renderRows() {
       createRowElement();
       addElementToPage('td', playersData[i].name, trEl);
       addElementToPage('td', playersData[i].session[j].day, trEl);
-      addElementToPage('td', attempts, trEl);
       addElementToPage('td', correctAttempts, trEl);
+      addElementToPage('td', attempts, trEl);
       addElementToPage('td', stringRatio, trEl);
     }
   }

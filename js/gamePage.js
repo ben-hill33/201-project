@@ -10,8 +10,17 @@ var timeBlock = document.getElementById('counter');
 var statusBar = document.getElementById('correct-bars');
 var resultMessageContainer = document.getElementById('resultMessageContainer');
 var congratsMessage = document.getElementById('congratsMessage');
-var main = document.getElementById('main');
+var congratsMessage2 = document.getElementById('congratsMessage2');
+// var main = document.getElementById('main');
 var goToResultPageContainer = document.getElementById('see-results');
+
+var statusBarContainer = document.getElementById('statusBarContainer');
+var timerDisplay = document.getElementById('timer');
+var resultDisplay = document.getElementById('resultMessageContainer');
+var codeBlockDisplay = document.getElementById('code-block');
+var userInputBox = document.getElementById('user-input-box');
+var nextButtonContainer = document.getElementById('nextButtonContainer');
+
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
@@ -102,7 +111,7 @@ function handleSubmitAnswer(event) {
     currentSession.correctAttempts++;
     addElementToPage('li', '  ', statusBar);
     resultMessage.textContent = 'CORRECT!!';
-    resultMessageContainer.style.backgroundColor = 'rgb(27, 164, 0';
+    resultMessageContainer.style.backgroundColor = 'rgb(27, 164, 0)';
     timeBlock.style.visibility = 'hidden';
     enterButton.style.visibility = 'hidden';
     nextButton.style.visibility = 'visible';
@@ -115,7 +124,7 @@ function handleSubmitAnswer(event) {
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   saveToLocalStorage();
   event.target.userAnswer.value = '';
-  if (currentSession.correctAttempts >= 10) {
+  if (currentSession.correctAttempts >= 5) {
     displayCongratsMessage();
   }
 }
@@ -140,7 +149,7 @@ function timer(seconds) {
   gameTimer = setInterval(function () {
     if (timeleft <= 0) {
       clearInterval(gameTimer);
-      resultMessage.style.color = 'red';
+      resultMessageContainer.style.backgroundColor = 'red';
       resultMessage.textContent = "Time's up";
       enterButton.style.visibility = 'hidden';
       nextButton.style.visibility = 'visible';
@@ -160,10 +169,20 @@ function addElementToPage(elementType, content, parentEl) {
 
 
 function displayCongratsMessage() {
-  main.style.display = 'none';
+  // main.style.display = 'none';
+
+  statusBarContainer.style.display = 'none';
+  timerDisplay.style.display = 'none';
+  resultDisplay.style.display = 'none';
+  codeBlockDisplay.style.display = 'none';
+  userInputBox.style.display = 'none';
+  nextButtonContainer.style.display = 'none';
+
+
   goToResultPageContainer.style.width = '500px';
   goToResultPageContainer.style.height = '250px';
-  congratsMessage.textContent = 'Congratulations!! You Found our Errors!!';
+  congratsMessage.textContent = 'Congratulations!!';
+  congratsMessage2.textContent = 'You Found our Errors!! Come back again for more training.';
 }
 
 initializeGame();

@@ -1,3 +1,7 @@
+h1 {
+  padding: 20px;
+}
+
 h3 {
   font-family: 'Monofett', cursive;
   font-size: 25pt;
@@ -6,12 +10,18 @@ h3 {
   text-align: center;
 }
 
+main {
+  width: 976px;
+}
+
 .benColumn, .daveeColumn, .taylorColumn {
   width: 300px;
   float: left;
   margin: 10px;
   margin-top: 25px;
   background-color: white;
+  border-radius: 12px;
+  border: 2px solid #da0078;
 }
 
 img {
@@ -32,8 +42,6 @@ nav {
 
 nav ul {
   display: inline;
-  /* align-content: space-around;
-  justify-content: space-evenly; */
 }
 
 nav li {
@@ -43,7 +51,8 @@ nav li {
   justify-content: space-evenly;
   font-size: 20px;
   padding: 10px;
-  background-color: white
+  background-color: white;
+  border-radius: 8px;
 }
 
 .shrink:hover {
