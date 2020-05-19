@@ -6,6 +6,8 @@ nav {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  /* margin-right: auto;
+  margin-left: auto; */
   display: inline-flex;
 }
 
@@ -13,6 +15,7 @@ nav ul {
   display: inline-flex;
   align-content: space-around;
   justify-content: space-evenly;
+  margin: 0px auto;
 }
 
 nav li {

@@ -33,7 +33,6 @@ h3 {
   padding-top: 10px;
   float: left;
   overflow: auto;
-  /* border: 1px solid blue; */
 }
 
 #barContainer {
@@ -68,7 +67,7 @@ h3 {
 
 #code-block>h2 {
   font-family: 'Rajdhani', sans-serif;
-  padding-top: 5px;
+  padding-top: 10px;
 }
 
 #code-block {
@@ -117,10 +116,19 @@ h3 {
 
 .goToResults {
   height: 50px;
-  width: 150px;
+  width: 250px;
   padding-top: 25px;
   margin-top: 20px;
   font-family: 'Rajdhani', sans-serif;
+}
+
+#see-results a {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 40px;
+  padding: 30px;
 }
 
 nav {
@@ -194,9 +202,4 @@ form input {
 
 footer {
   margin-top: 100px;
-}
-
-h4 {
-  font-size: 40px;
-  padding: 30px;
 }

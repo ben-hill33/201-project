@@ -25,7 +25,7 @@ function createHeading() {
 
 function renderRows() {
   for (var i = 0; i < playersData.length; i++) {
-    for (var j = 0; j < playersData[i].session.length; j++) {
+    for (var j = playersData[i].session.length - 1; j >= 0; j--) {
       createRowElement();
       addElementToPage('td', playersData[i].name, trEl);
       addElementToPage('td', playersData[i].session[j].day, trEl);
@@ -34,6 +34,7 @@ function renderRows() {
     }
   }
 }
+
 
 loadLocalStorage();
 createHeading();
