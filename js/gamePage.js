@@ -14,6 +14,14 @@ var congratsMessage2 = document.getElementById('congratsMessage2');
 var main = document.getElementById('main');
 var goToResultPageContainer = document.getElementById('see-results');
 
+var statusBarContainer = document.getElementById('statusBarContainer');
+var timerDisplay = document.getElementById('timer');
+var resultDisplay = document.getElementById('resultMessageContainer');
+var codeBlockDisplay = document.getElementById('code-block');
+var userInputBox = document.getElementById('user-input-box');
+var nextButtonContainer = document.getElementById('nextButtonContainer');
+
+
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
 nextButton.addEventListener('click', handleNextQuestionButton);
@@ -161,11 +169,20 @@ function addElementToPage(elementType, content, parentEl) {
 
 
 function displayCongratsMessage() {
-  main.style.display = 'none';
+  // main.style.display = 'none';
+
+  statusBarContainer.style.display = 'none';
+  timerDisplay.style.display = 'none';
+  resultDisplay.style.display = 'none';
+  codeBlockDisplay.style.display = 'none';
+  userInputBox.style.display = 'none';
+  nextButtonContainer.style.display = 'none';
+
+
   goToResultPageContainer.style.width = '500px';
   goToResultPageContainer.style.height = '250px';
   congratsMessage.textContent = 'Congratulations!!';
-  congratsMessage2.textContent = 'You Found our Errors!! Come back again for more traning.';
+  congratsMessage2.textContent = 'You Found our Errors!! Come back again for more training.';
 }
 
 initializeGame();
