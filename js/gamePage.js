@@ -10,6 +10,7 @@ var timeBlock = document.getElementById('counter');
 var statusBar = document.getElementById('correct-bars');
 var resultMessageContainer = document.getElementById('resultMessageContainer');
 var congratsMessage = document.getElementById('congratsMessage');
+var congratsMessage2 = document.getElementById('congratsMessage2');
 var main = document.getElementById('main');
 var goToResultPageContainer = document.getElementById('see-results');
 
@@ -115,7 +116,7 @@ function handleSubmitAnswer(event) {
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   saveToLocalStorage();
   event.target.userAnswer.value = '';
-  if (currentSession.correctAttempts >= 10) {
+  if (currentSession.correctAttempts >= 2) {
     displayCongratsMessage();
   }
 }
@@ -140,7 +141,7 @@ function timer(seconds) {
   gameTimer = setInterval(function () {
     if (timeleft <= 0) {
       clearInterval(gameTimer);
-      resultMessage.style.color = 'red';
+      resultMessageContainer.style.backgroundColor = 'red';
       resultMessage.textContent = "Time's up";
       enterButton.style.visibility = 'hidden';
       nextButton.style.visibility = 'visible';
@@ -163,7 +164,8 @@ function displayCongratsMessage() {
   main.style.display = 'none';
   goToResultPageContainer.style.width = '500px';
   goToResultPageContainer.style.height = '250px';
-  congratsMessage.textContent = 'Congratulations!! You Found our Errors!!';
+  congratsMessage.textContent = 'Congratulations!!';
+  congratsMessage2.textContent = 'You Found our Errors!! Come back again for more traning.';
 }
 
 initializeGame();
