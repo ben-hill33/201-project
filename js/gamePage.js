@@ -103,7 +103,7 @@ function handleSubmitAnswer(event) {
     currentSession.correctAttempts++;
     addElementToPage('li', '  ', statusBar);
     resultMessage.textContent = 'CORRECT!!';
-    resultMessageContainer.style.backgroundColor = 'rgb(27, 164, 0';
+    resultMessageContainer.style.backgroundColor = 'rgb(27, 164, 0)';
     timeBlock.style.visibility = 'hidden';
     enterButton.style.visibility = 'hidden';
     nextButton.style.visibility = 'visible';
@@ -116,7 +116,7 @@ function handleSubmitAnswer(event) {
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   saveToLocalStorage();
   event.target.userAnswer.value = '';
-  if (currentSession.correctAttempts >= 2) {
+  if (currentSession.correctAttempts >= 5) {
     displayCongratsMessage();
   }
 }

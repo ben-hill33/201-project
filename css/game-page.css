@@ -1,8 +1,12 @@
 main {
-  width: 960px;
-  min-height: 600px;
+  width: 1000px;
+  min-height: 750px;
   margin: 10px auto;
-  /* border: 3px solid orange; */
+  background-color: rgba(128, 128, 128, 0.632);
+}
+
+h2 {
+  color: rgb(65, 65, 65);
 }
 
 div {
@@ -20,6 +24,7 @@ h3 {
   width: 960px;
   height: 80px;
   margin: 15px auto;
+  margin-top: 20px;
   overflow: auto;
 }
 
@@ -60,6 +65,7 @@ h3 {
   width: 160px;
   height: 160px;
   margin: 5px auto;
+  margin-left: 20px;
   overflow: auto;
   font-family: 'Rajdhani', sans-serif;
   float: left;
@@ -82,6 +88,7 @@ h3 {
   width: 160px;
   height: 160px;
   margin: 5px auto;
+  margin-right: 20px;
   float: right;
   font-family: 'Rajdhani', sans-serif;
   overflow: auto;
@@ -100,6 +107,8 @@ h3 {
 
 #enterButton {
   color: white;
+  background: blue;
+  box-shadow: 0 10px 0 rgb(187, 187, 187);
 }
 
 #nextButtonContainer {
@@ -109,7 +118,8 @@ h3 {
 #nextButton {
   visibility: hidden;
   color: black;
-  background: yellow;
+  background: rgb(27, 164, 0);
+  box-shadow: 0 10px 0 rgb(255, 255, 255);
   width: 250px;
   height: 50px;
   font-family: 'Rajdhani', sans-serif;
@@ -174,9 +184,7 @@ a:hover {
 button {
   width: 150px;
   border: 0;
-  background: rgb(164, 48, 6);
   border-radius: 4px;
-  box-shadow: 0 10px 0 orange;
   color: black;
   cursor: pointer;
   font: inherit;
@@ -198,7 +206,7 @@ button, input, select, textarea {
 
 label {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 form input {
