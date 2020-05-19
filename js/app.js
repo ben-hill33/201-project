@@ -35,7 +35,7 @@ function Player(name) {
 
 // Declare New Player Session
 function Session() {
-  this.day = new Date();
+  this.day = new Date().toString();
   this.attempts = 0;
   this.correctAttempts = 0;
   playersData[currentPLayerIndex].session.push(this);
