@@ -91,7 +91,7 @@ h3 {
   color: white;
 }
 
-.inputBoxDisplay {
+#user-input-box {
   width: 600px;
   height: 100px;
   padding: 10px 0px;
@@ -114,7 +114,7 @@ h3 {
   font-family: 'Rajdhani', sans-serif;
 }
 
-.goToResults {
+#see-results {
   height: 50px;
   width: 250px;
   padding-top: 25px;
