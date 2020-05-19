@@ -1,58 +1,9 @@
-nav {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  display: inline-flex;
-}
-
-
-nav ul {
-  display: inline-flex;
-  align-content: space-around;
-  justify-content: space-evenly;
-}
-
-nav li {
-  display: inline;
-  font-family: 'Rajdhani', sans-serif;
-  margin-right: 50px;
-  justify-content: space-evenly;
-  font-size: 20px;
-  padding: 10px;
-  display: inline-flex;
-  background-color: white
-}
-
-.shrink:hover {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-
 h3 {
   font-family: 'Monofett', cursive;
   font-size: 25pt;
   background-color: white;
   margin-top: 15px;
   text-align: center;
-}
-
-.about {
-  display: inline-flex;
-  width: 315px;
-  height: 550px;
-}
-
-.about p {
-  font-family: 'Rajdhani', sans-serif;
-  background-color: white;
-}
-
-img {
-  width: 300px;
-  height: 300px;
-  padding-top: 15px;
 }
 
 .benColumn, .daveeColumn, .taylorColumn {
@@ -63,6 +14,44 @@ img {
   background-color: white;
 }
 
+img {
+  width: 300px;
+  height: 300px;
+  padding-top: 15px;
+}
+
 p {
   padding: 10px 15px;
+}
+
+nav {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: inline;
+  /* align-content: space-around;
+  justify-content: space-evenly; */
+}
+
+nav li {
+  display: inline;
+  font-family: 'Rajdhani', sans-serif;
+  margin-right: 50px;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white
+}
+
+.shrink:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+footer {
+  height: 90px;
 }

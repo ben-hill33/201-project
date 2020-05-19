@@ -1,14 +1,7 @@
-#hideThisButton {
-  visibility: hidden;
-}
-
 nav {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  /* margin-right: auto;
-  margin-left: auto; */
-  /* display: block; */
 }
 
 nav ul {
@@ -86,7 +79,7 @@ form input {
 }
 
 #gameInstructions>p {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   line-height: 1.2em;
 }
 
@@ -95,4 +88,3 @@ div {
   text-align: center;
   background-color: white;
 }
-
