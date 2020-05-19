@@ -5,6 +5,10 @@ body {
 footer {
   background-color: blue;
   margin-top: 50px;
+  /* width: 960px; */
+  min-height: 60px;
+  margin: 0px;
+ 
 }
 
 main {
