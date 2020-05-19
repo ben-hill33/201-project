@@ -166,7 +166,7 @@ function displayCongratsMessage() {
   main.style.height = '50px';
   main.textContent = '';
   goToResultPageContainer.style.width = '500px';
-  goToResultPageContainer.style.height = '300px';
+  goToResultPageContainer.style.height = '250px';
 
   congratsMessage.textContent = 'Congratulations!! You leveled up!! See Your Daily Score and come back next time!!';
 }
