@@ -2,17 +2,20 @@ main {
   width: 1000px;
   min-height: 840px;
   margin: 10px auto;
-  background-color: rgba(143, 143, 143, 0.612)
+  background-color: rgba(143, 143, 143, 0.6);
+  border-radius: 15px;
+  border: 3px solid blue;
 }
 
 h2 {
   color: rgb(52, 52, 52);
+  border-radius: 12px;
 }
 
 div {
   margin: 10px auto;
   text-align: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.92);
 }
 
 h3 {
@@ -25,8 +28,10 @@ h3 {
   width: 960px;
   height: 80px;
   margin: 15px auto;
+  margin-top: 50px;
   margin-top: 20px;
   overflow: auto;
+  border-radius: 12px;
 }
 
 #statusBarContainer>h2 {
@@ -70,6 +75,7 @@ h3 {
   overflow: auto;
   font-family: 'Rajdhani', sans-serif;
   float: left;
+  border-radius: 12px;
 }
 
 #code-block>h2 {
@@ -83,6 +89,7 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  border-radius: 12px;
 }
 
 #resultMessageContainer {
@@ -93,6 +100,7 @@ h3 {
   float: right;
   font-family: 'Rajdhani', sans-serif;
   overflow: auto;
+  border-radius: 12px;
 }
 
 #resultMessage {
@@ -104,6 +112,7 @@ h3 {
   height: 100px;
   padding: 10px 0px;
   margin-top: 20px;
+  border-radius: 12px;
 }
 
 #enterButton {
@@ -133,6 +142,7 @@ h3 {
   margin-top: 20px;
   margin-bottom: 30px;
   font-family: 'Rajdhani', sans-serif;
+  border-radius: 10px;
 }
 
 #see-results a {

@@ -12,11 +12,13 @@ main {
 
 h1 {
   font-family: 'Monofett', cursive;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   text-align: center;
   font-size: 60px;
   color: blue;
   background-color: white;
+  border-bottom: 6px blue solid;
+  border-top: 6px blue solid;
 }
 
 span {

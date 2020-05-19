@@ -11,7 +11,7 @@ var statusBar = document.getElementById('correct-bars');
 var resultMessageContainer = document.getElementById('resultMessageContainer');
 var congratsMessage = document.getElementById('congratsMessage');
 var congratsMessage2 = document.getElementById('congratsMessage2');
-var main = document.getElementById('main');
+// var main = document.getElementById('main');
 var goToResultPageContainer = document.getElementById('see-results');
 
 var statusBarContainer = document.getElementById('statusBarContainer');

@@ -12,13 +12,10 @@ nav ul {
 }
 
 nav li {
-  /* display: inline; */
   font-family: 'Rajdhani', sans-serif;
-  /* margin-right: 50px; */
   justify-content: space-evenly;
   font-size: 20px;
   padding: 10px;
-  /* display: inline-flex; */
   background-color: white
 }
 
@@ -87,4 +84,9 @@ div {
   margin: 20px auto;
   text-align: center;
   background-color: white;
+  border-radius: 12px;
+}
+
+h2 {
+  border-radius: 12px;
 }
