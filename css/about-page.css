@@ -10,6 +10,10 @@ h3 {
   text-align: center;
 }
 
+main {
+  width: 976px;
+}
+
 .benColumn, .daveeColumn, .taylorColumn {
   width: 300px;
   float: left;
@@ -17,6 +21,7 @@ h3 {
   margin-top: 25px;
   background-color: white;
   border-radius: 12px;
+  border: 2px solid #da0078;
 }
 
 img {
