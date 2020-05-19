@@ -1,9 +1,10 @@
 nav {
 	text-align: center;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: inline-flex;
 }
+
 
 nav ul {
   display: inline-flex;
@@ -29,9 +30,6 @@ nav li {
         transform: scale(0.8);
 }
 
-footer {
-  margin-top: 50px;
-}
 
 h3 {
     font-family: 'Monofett', cursive;
