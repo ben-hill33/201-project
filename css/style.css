@@ -8,12 +8,10 @@ main {
   margin: 5px auto;
 }
 
-/* name of game */
-
 h1 {
   font-family: 'Monofett', cursive;
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   color: blue;
   background-color: white;
   border-bottom: 7px blue solid;
@@ -24,8 +22,6 @@ span {
   color: red;
 }
 
-/* instructions & form  */
-
 h2 {
   text-align: center;
   font-size: 40px;
@@ -34,8 +30,6 @@ h2 {
   background-color: white;
   color: #da0078;
 }
-
-/* game instructions copy */
 
 p {
   margin: 0px auto 5px auto;
@@ -47,8 +41,8 @@ p {
 
 footer {
   background-color: blue;
-  margin-top: 50px;
-  min-height: 60px;
+  margin-top: 40px;
+  min-height: 40px;
   position: fixed;
   left: 0;
   bottom: 0;

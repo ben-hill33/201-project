@@ -11,15 +11,14 @@ var statusBar = document.getElementById('correct-bars');
 var resultMessageContainer = document.getElementById('resultMessageContainer');
 var congratsMessage = document.getElementById('congratsMessage');
 var congratsMessage2 = document.getElementById('congratsMessage2');
-// var main = document.getElementById('main');
 var goToResultPageContainer = document.getElementById('see-results');
-
 var statusBarContainer = document.getElementById('statusBarContainer');
 var timerDisplay = document.getElementById('timer');
 var resultDisplay = document.getElementById('resultMessageContainer');
 var codeBlockDisplay = document.getElementById('code-block');
 var userInputBox = document.getElementById('user-input-box');
 var nextButtonContainer = document.getElementById('nextButtonContainer');
+var main = document.getElementById('main');
 
 
 // Listeners
@@ -38,43 +37,43 @@ function CodeBlockPair(codeBlockImg, answer) {
   codeBlockWithAnswers.push(this);
 }
 
-new CodeBlockPair('../codeBlock-images/q1-a7.png', [7]);
-new CodeBlockPair('../codeBlock-images/q2-a7.png', [7]);
-new CodeBlockPair('../codeBlock-images/q3-a14.png', [14]);
-new CodeBlockPair('../codeBlock-images/q4-a4.png', [4]);
-new CodeBlockPair('../codeBlock-images/q5-a8.png', [8]);
-new CodeBlockPair('../codeBlock-images/q6-a2.png', [2]);
-new CodeBlockPair('../codeBlock-images/q7-a4.png', [4]);
-new CodeBlockPair('../codeBlock-images/q8-a5.png', [5]);
-new CodeBlockPair('../codeBlock-images/q9-a10or11.png', [10], [11]);
-new CodeBlockPair('../codeBlock-images/q10-a1.png', [1]);
-new CodeBlockPair('../codeBlock-images/q11-a4.png', [4]);
-new CodeBlockPair('../codeBlock-images/q12-a3.png', [3]);
-new CodeBlockPair('../codeBlock-images/q13-a5.png', [5]);
-new CodeBlockPair('../codeBlock-images/q14-a2.png', [2]);
-new CodeBlockPair('../codeBlock-images/q15-a2.png', [2]);
-new CodeBlockPair('../codeBlock-images/q16-a3.png', [3]);
-new CodeBlockPair('../codeBlock-images/q17-a2.png', [2]);
-new CodeBlockPair('../codeBlock-images/q18-a8.png', [8]);
-new CodeBlockPair('../codeBlock-images/q19-a1.png', [1]);
-new CodeBlockPair('../codeBlock-images/q20-a6.png', [6]);
-new CodeBlockPair('../codeBlock-images/q21-a3.png', [3]);
-new CodeBlockPair('../codeBlock-images/q22-a1or10.png', [1], [10]);
-new CodeBlockPair('../codeBlock-images/q23-a7.png', [7]);
-new CodeBlockPair('../codeBlock-images/q24-a7.png', [7]);
-new CodeBlockPair('../codeBlock-images/q25-a5.png', [5]);
-new CodeBlockPair('../codeBlock-images/q26-a4.png', [4]);
-new CodeBlockPair('../codeBlock-images/q27-a1.png', [1]);
-new CodeBlockPair('../codeBlock-images/q28-a7.png', [7]);
-new CodeBlockPair('../codeBlock-images/q29-a5.png', [5]);
-new CodeBlockPair('../codeBlock-images/q30-a4.png', [4]);
+// new CodeBlockPair('../codeBlock-images/q1-a7.png', [7]);
+// new CodeBlockPair('../codeBlock-images/q2-a7.png', [7]);
+// new CodeBlockPair('../codeBlock-images/q3-a14.png', [14]);
+// new CodeBlockPair('../codeBlock-images/q4-a4.png', [4]);
+// new CodeBlockPair('../codeBlock-images/q5-a8.png', [8]);
+// new CodeBlockPair('../codeBlock-images/q6-a2.png', [2]);
+// new CodeBlockPair('../codeBlock-images/q7-a4.png', [4]);
+// new CodeBlockPair('../codeBlock-images/q8-a5.png', [5]);
+// new CodeBlockPair('../codeBlock-images/q9-a10or11.png', [10], [11]);
+// new CodeBlockPair('../codeBlock-images/q10-a1.png', [1]);
+// new CodeBlockPair('../codeBlock-images/q11-a4.png', [4]);
+// new CodeBlockPair('../codeBlock-images/q12-a3.png', [3]);
+// new CodeBlockPair('../codeBlock-images/q13-a5.png', [5]);
+// new CodeBlockPair('../codeBlock-images/q14-a2.png', [2]);
+// new CodeBlockPair('../codeBlock-images/q15-a2.png', [2]);
+// new CodeBlockPair('../codeBlock-images/q16-a3.png', [3]);
+// new CodeBlockPair('../codeBlock-images/q17-a2.png', [2]);
+// new CodeBlockPair('../codeBlock-images/q18-a8.png', [8]);
+// new CodeBlockPair('../codeBlock-images/q19-a1.png', [1]);
+// new CodeBlockPair('../codeBlock-images/q20-a6.png', [6]);
+// new CodeBlockPair('../codeBlock-images/q21-a3.png', [3]);
+// new CodeBlockPair('../codeBlock-images/q22-a1or10.png', [1], [10]);
+// new CodeBlockPair('../codeBlock-images/q23-a7.png', [7]);
+// new CodeBlockPair('../codeBlock-images/q24-a7.png', [7]);
+// new CodeBlockPair('../codeBlock-images/q25-a5.png', [5]);
+// new CodeBlockPair('../codeBlock-images/q26-a4.png', [4]);
+// new CodeBlockPair('../codeBlock-images/q27-a1.png', [1]);
+// new CodeBlockPair('../codeBlock-images/q28-a7.png', [7]);
+// new CodeBlockPair('../codeBlock-images/q29-a5.png', [5]);
+// new CodeBlockPair('../codeBlock-images/q30-a4.png', [4]);
 
-// new CodeBlockPair('../codeBlock-images/A1.png', [1]);
-// new CodeBlockPair('../codeBlock-images/A5.png', [5]);
-// new CodeBlockPair('../codeBlock-images/A10.png', [10]);
-// new CodeBlockPair('../codeBlock-images/A15.png', [15]);
-// new CodeBlockPair('../codeBlock-images/A20.png', [20]);
-// new CodeBlockPair('../codeBlock-images/A25.png', [25]);
+new CodeBlockPair('../codeBlock-images/A1.png', [1]);
+new CodeBlockPair('../codeBlock-images/A5.png', [5]);
+new CodeBlockPair('../codeBlock-images/A10.png', [10]);
+new CodeBlockPair('../codeBlock-images/A15.png', [15]);
+new CodeBlockPair('../codeBlock-images/A20.png', [20]);
+new CodeBlockPair('../codeBlock-images/A25.png', [25]);
 
 function randomizer(max) {
   return Math.floor(Math.random() * max);
@@ -119,12 +118,16 @@ function handleSubmitAnswer(event) {
   } else {
     resultMessage.textContent = 'WRONG!! Try Again';
     resultMessageContainer.style.backgroundColor = 'red';
+
+    main.style.backgroundColor = 'rgba(255, 0, 0, 0.694)';
+    main.style.backgroundColor = 'rgba(143, 143, 143, 0.5)';
+
   }
   currentSession.attempts++;
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   saveToLocalStorage();
   event.target.userAnswer.value = '';
-  if (currentSession.correctAttempts >= 5) {
+  if (currentSession.correctAttempts >= 2) {
     displayCongratsMessage();
   }
 }
@@ -169,16 +172,12 @@ function addElementToPage(elementType, content, parentEl) {
 
 
 function displayCongratsMessage() {
-  // main.style.display = 'none';
-
   statusBarContainer.style.display = 'none';
   timerDisplay.style.display = 'none';
   resultDisplay.style.display = 'none';
   codeBlockDisplay.style.display = 'none';
   userInputBox.style.display = 'none';
   nextButtonContainer.style.display = 'none';
-
-
   goToResultPageContainer.style.width = '500px';
   goToResultPageContainer.style.height = '250px';
   congratsMessage.textContent = 'Congratulations!!';

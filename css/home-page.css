@@ -22,8 +22,8 @@ h2 {
 
 nav {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 nav ul {
@@ -58,13 +58,8 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* form  */
-
 button {
   border: 0;
-  /* color: black;
-  box-shadow: 0 10px 0 orange;
-  background: orangered; */
   width: 150px;
   color: white;
   box-shadow: 0 10px 0 rgb(187, 187, 187);

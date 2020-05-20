@@ -1,6 +1,6 @@
 main {
   width: 1000px;
-  min-height: 840px;
+  min-height: 700px;
   margin: 10px auto;
   background-color: rgba(143, 143, 143, 0.5);
   border-radius: 15px;
@@ -27,10 +27,8 @@ h3 {
 
 #statusBarContainer {
   width: 960px;
-  height: 80px;
-  margin: 15px auto;
-  margin-top: 50px;
-  margin-top: 20px;
+  height: 60px;
+  margin: 10px auto;
   overflow: auto;
   border-radius: 12px;
   border: 2px solid blue;
@@ -41,9 +39,9 @@ h3 {
   font-size: 30px;
   text-align: center;
   width: 100px;
-  height: 85px;
+  height: 60px;
   margin-top: 0px;
-  padding-top: 10px;
+  padding: 2px;
   float: left;
   overflow: auto;
 }
@@ -59,7 +57,7 @@ h3 {
 #correct-bars li {
   background-color: rgb(43, 255, 0);
   width: 70px;
-  height: 75px;
+  height: 55px;
   display: inline-block;
   float: left;
   margin: 2px;
@@ -72,7 +70,7 @@ h3 {
 #timer {
   width: 160px;
   height: 160px;
-  margin: 5px auto;
+  margin: 0px auto;
   margin-left: 20px;
   overflow: auto;
   font-family: 'Rajdhani', sans-serif;
@@ -83,15 +81,16 @@ h3 {
 }
 
 #code-block>h2 {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  font-size: 35px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   font-family: 'Rajdhani', sans-serif;
-  background-color: rgba(255, 255, 255, 0.92);
+  background-color: rgba(255, 255, 255, 0.82);
 }
 
 #code-block {
   width: 600px;
-  min-height: 400px;
+  min-height: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
@@ -102,7 +101,7 @@ h3 {
 #resultMessageContainer {
   width: 160px;
   height: 160px;
-  margin: 5px auto;
+  margin: 0px auto;
   margin-right: 20px;
   float: right;
   font-family: 'Rajdhani', sans-serif;
@@ -119,7 +118,7 @@ h3 {
   width: 600px;
   height: 100px;
   padding: 10px 0px;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 12px;
   border: 3px solid #da0078;
 }
@@ -135,19 +134,20 @@ h3 {
 }
 
 #nextButton {
+  margin-top: 0px;
   visibility: hidden;
   color: black;
   background: rgb(27, 164, 0);
-  box-shadow: 0 10px 0 rgb(255, 255, 255);
+  box-shadow: 0 8px 0 rgb(255, 255, 255);
   width: 250px;
   height: 50px;
   font-family: 'Rajdhani', sans-serif;
 }
 
 #see-results {
-  height: 40px;
+  height: 30px;
   width: 250px;
-  padding-top: 10px;
+  padding-top: 6px;
   margin-top: 20px;
   margin-bottom: 30px;
   font-family: 'Rajdhani', sans-serif;
@@ -160,6 +160,7 @@ h3 {
 }
 
 h4 {
+  color: rgb(52, 52, 52);
   font-size: 40px;
   padding: 5px 40px;
 }
@@ -171,8 +172,8 @@ h4 {
 
 nav {
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: inline-flex;
 }
 
