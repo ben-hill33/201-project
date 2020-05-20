@@ -18,8 +18,8 @@ var resultDisplay = document.getElementById('resultMessageContainer');
 var codeBlockDisplay = document.getElementById('code-block');
 var userInputBox = document.getElementById('user-input-box');
 var nextButtonContainer = document.getElementById('nextButtonContainer');
-var main = document.getElementById('main');
-
+var timeLeft = 30;// Can manualy enter time left here
+var correctAnswerAmount = 5;// Manually enter correct amount to get to result page
 
 // Listeners
 userAnswerForm.addEventListener('submit', handleSubmitAnswer);
@@ -81,7 +81,6 @@ function randomizer(max) {
 
 
 var previousIndex;
-// create a function to randomize array of codeblocks
 function displayRandomCodeBlock() {
   var codeBlockIndex = randomizer(codeBlockWithAnswers.length);
   while (previousIndex === codeBlockIndex) {
@@ -97,7 +96,7 @@ function displayRandomCodeBlock() {
 function initializeGame() {
   loadLocalStorage();
   displayRandomCodeBlock();
-  timer(60);
+  timer(timeLeft);
 }
 
 
@@ -118,16 +117,12 @@ function handleSubmitAnswer(event) {
   } else {
     resultMessage.textContent = 'WRONG!! Try Again';
     resultMessageContainer.style.backgroundColor = 'red';
-
-    main.style.backgroundColor = 'rgba(255, 0, 0, 0.694)';
-    main.style.backgroundColor = 'rgba(143, 143, 143, 0.5)';
-
   }
   currentSession.attempts++;
   playersData[currentPLayerIndex].session[playerSessionArray.length - 1] = currentSession;
   saveToLocalStorage();
   event.target.userAnswer.value = '';
-  if (currentSession.correctAttempts >= 2) {
+  if (currentSession.correctAttempts >= correctAnswerAmount) {
     displayCongratsMessage();
   }
 }
@@ -137,7 +132,7 @@ function handleNextQuestionButton(event) {
   event.preventDefault();
   timeBlock.textContent = '';
   displayRandomCodeBlock();
-  timer(60);
+  timer(timeLeft);
   timeBlock.style.visibility = 'visible';
   nextButton.style.visibility = 'hidden';
   enterButton.style.visibility = 'visible';
