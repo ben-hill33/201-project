@@ -39,13 +39,55 @@ p {
   font-size: 20px;
 }
 
+.shrink:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+a:hover {
+  color: orange;
+}
+
 footer {
   background-color: blue;
-  margin-top: 40px;
+  margin-top: 50px;
   min-height: 40px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+nav {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-flex;
+}
+
+nav ul {
+  display: inline-flex;
+  align-content: space-around;
+  justify-content: space-evenly;
+  margin: 0px auto;
+}
+
+nav li {
+  font-family: 'Rajdhani', sans-serif;
+  justify-content: space-evenly;
+  font-size: 20px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  display: inline;
+  margin-right: 25px;
+  margin-left: 25px;
 }
