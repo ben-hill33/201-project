@@ -1,3 +1,25 @@
+div {
+  margin: 20px auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+  border: 3px solid #da0078;
+}
+
+h2 {
+  border-radius: 12px;
+}
+
+#gameInstructions>h2 {
+  padding: 5px;
+  background-color: white;
+}
+
+#gameInstructions>p {
+  padding-bottom: 13px;
+  line-height: 1.3em;
+}
+
 nav {
   text-align: center;
   margin-top: 30px;
@@ -12,14 +34,12 @@ nav ul {
 }
 
 nav li {
-  /* display: inline; */
   font-family: 'Rajdhani', sans-serif;
-  /* margin-right: 50px; */
   justify-content: space-evenly;
   font-size: 20px;
   padding: 10px;
-  /* display: inline-flex; */
-  background-color: white
+  background-color: white;
+  border-radius: 5px;
 }
 
 .shrink:hover {
@@ -42,10 +62,14 @@ a:hover {
 
 button {
   border: 0;
-  background: orangered;
-  border-radius: 4px;
+  /* color: black;
   box-shadow: 0 10px 0 orange;
-  color: black;
+  background: orangered; */
+  width: 150px;
+  color: white;
+  box-shadow: 0 10px 0 rgb(187, 187, 187);
+  background: blue;
+  border-radius: 4px;
   cursor: pointer;
   font: inherit;
   margin: 15px auto;
@@ -72,19 +96,4 @@ label {
 form input {
   width: 50%;
   margin-top: 10px;
-}
-
-#gameInstructions>h2 {
-  padding: 15px;
-}
-
-#gameInstructions>p {
-  padding-bottom: 30px;
-  line-height: 1.2em;
-}
-
-div {
-  margin: 20px auto;
-  text-align: center;
-  background-color: white;
 }

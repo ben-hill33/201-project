@@ -1,26 +1,39 @@
 main {
-  width: 960px;
-  min-height: 600px;
+  width: 1000px;
+  min-height: 840px;
   margin: 10px auto;
-  /* border: 3px solid orange; */
+  background-color: rgba(143, 143, 143, 0.5);
+  border-radius: 15px;
+  border: 2px solid blue;
+  margin-bottom: 140px;
+}
+
+h2 {
+  color: rgb(52, 52, 52);
+  border-radius: 12px;
 }
 
 div {
   margin: 10px auto;
   text-align: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.92);
 }
 
 h3 {
   font-size: 35px;
   padding: 25px 10px;
+  color: rgb(52, 52, 52);
 }
 
 #statusBarContainer {
   width: 960px;
   height: 80px;
   margin: 15px auto;
+  margin-top: 50px;
+  margin-top: 20px;
   overflow: auto;
+  border-radius: 12px;
+  border: 2px solid blue;
 }
 
 #statusBarContainer>h2 {
@@ -60,14 +73,20 @@ h3 {
   width: 160px;
   height: 160px;
   margin: 5px auto;
+  margin-left: 20px;
   overflow: auto;
   font-family: 'Rajdhani', sans-serif;
   float: left;
+  border-radius: 12px;
+  border: 2px solid rgb(52, 52, 52);
+  ;
 }
 
 #code-block>h2 {
+  margin-top: 5px;
+  margin-bottom: 5px;
   font-family: 'Rajdhani', sans-serif;
-  padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.92);
 }
 
 #code-block {
@@ -76,30 +95,39 @@ h3 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+  border-radius: 12px;
+  border: 3px solid #da0078;
 }
 
 #resultMessageContainer {
   width: 160px;
   height: 160px;
   margin: 5px auto;
+  margin-right: 20px;
   float: right;
   font-family: 'Rajdhani', sans-serif;
   overflow: auto;
+  border-radius: 12px;
+  border: 2px solid rgb(52, 52, 52);
 }
 
 #resultMessage {
   color: white;
 }
 
-.inputBoxDisplay {
+#user-input-box {
   width: 600px;
   height: 100px;
   padding: 10px 0px;
   margin-top: 20px;
+  border-radius: 12px;
+  border: 3px solid #da0078;
 }
 
 #enterButton {
   color: white;
+  background: blue;
+  box-shadow: 0 10px 0 rgb(187, 187, 187);
 }
 
 #nextButtonContainer {
@@ -108,18 +136,23 @@ h3 {
 
 #nextButton {
   visibility: hidden;
-  color: rgb(237, 228, 228);
+  color: black;
+  background: rgb(27, 164, 0);
+  box-shadow: 0 10px 0 rgb(255, 255, 255);
   width: 250px;
   height: 50px;
   font-family: 'Rajdhani', sans-serif;
 }
 
-.goToResults {
-  height: 50px;
+#see-results {
+  height: 40px;
   width: 250px;
-  padding-top: 25px;
+  padding-top: 10px;
   margin-top: 20px;
+  margin-bottom: 30px;
   font-family: 'Rajdhani', sans-serif;
+  border-radius: 10px;
+  border: 2px solid blue;
 }
 
 #see-results a {
@@ -128,7 +161,12 @@ h3 {
 
 h4 {
   font-size: 40px;
-  padding: 30px;
+  padding: 5px 40px;
+}
+
+#congratsMessage {
+  font-size: 45px;
+  padding-top: 20px;
 }
 
 nav {
@@ -152,7 +190,8 @@ nav li {
   font-size: 20px;
   padding: 10px;
   display: inline-flex;
-  background-color: white
+  background-color: white;
+  border-radius: 5px;
 }
 
 .shrink:hover {
@@ -168,9 +207,7 @@ a:hover {
 button {
   width: 150px;
   border: 0;
-  background: rgb(164, 48, 6);
   border-radius: 4px;
-  box-shadow: 0 10px 0 orange;
   color: black;
   cursor: pointer;
   font: inherit;
@@ -192,7 +229,7 @@ button, input, select, textarea {
 
 label {
   font-family: 'Rajdhani', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 form input {

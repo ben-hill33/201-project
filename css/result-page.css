@@ -4,6 +4,7 @@ table {
   margin: 20px auto;
   text-align: center;
   background-color: white;
+  margin-bottom: 140px;
 }
 
 th {
@@ -41,7 +42,8 @@ nav li {
   justify-content: space-evenly;
   font-size: 20px;
   padding: 10px;
-  background-color: white
+  background-color: white;
+  border-radius: 8px;
 }
 
 .shrink:hover {
@@ -52,4 +54,8 @@ nav li {
 
 footer {
   margin-top: 50px;
+}
+
+h1 {
+  padding: 15px;
 }
