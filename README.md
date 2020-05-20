@@ -10,4 +10,4 @@ Authors: Ben Hill, Davee Sok, Taylor Thornton
 ![Wireframe](img/201-Wireframe.jpeg)
 
 ## Domain Model
-![Domain Mode](img/Domain-Model.jpeg)
+![Domain Model](img/Updated-Domain-Modeling.jpg)

@@ -2,16 +2,90 @@
 <html lang="en">
 
 <head>
-  <link href="/css/reset.css" type="text/css" rel="stylesheet">
-  <link href="/css/style.css" type="text/css" rel="stylesheet">
+  <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+  <link href="/css/style.css" type="text/css" rel="stylesheet" />
+  <link href="/css/game-page.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Faster+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet" />
   <title>Game Page</title>
 </head>
 
 <body>
-  <h1>Hello World</h1>
+  <header>
+    <h1>
+      Can_You_Spot_the_Syntax<br />
+      <span>Error?</span>
+    </h1>
+  </header>
+
+  <main id="main">
+
+    <div id="statusBarContainer">
+      <h2>Status<br>
+        Bar</h2>
+      <div id="barContainer">
+        <ul id="correct-bars">
+        </ul>
+      </div>
+      <h2 id="nextLevel">Level UP</h2>
+    </div>
 
 
-  <script src="/js/app.js"></script>
+    <div class="timerDisplay" id="timer">
+      <h3 id="counter">Timer</h3>
+    </div>
+
+
+    <div class="resultDisplay" id="resultMessageContainer">
+      <h3 id="resultMessage"></h3>
+    </div>
+
+
+    <div id="code-block">
+      <h2>Code Block</h2>
+      <img id="codeBlock-img" width="500" title="" alt="" src="" />
+    </div>
+
+
+    <div id="user-input-box">
+      <form id="userAnswerForm">
+        <label>What Line is the error on?</label>
+        <input id="userAnswer" type="number" placeholder="Enter a number" required />
+        <br />
+        <button id="enterButton" type="submit">Enter</button>
+      </form>
+    </div>
+
+
+    <div id="nextButtonContainer">
+      <button id="nextButton">ClICK FOR NEXT QUESTION</button>
+    </div>
+
+    <div id="see-results">
+      <a href="result.html">See Your Results</a>
+      <h4 id="congratsMessage"></h4>
+      <h4 id="congratsMessage2"></h4>
+    </div>
+
+  </main>
+
+
+  <footer>
+    <nav>
+      <ul class="shrink">
+        <li><a href="/index.html">homePage</a></li>
+      </ul>
+      <ul class="shrink">
+        <li><a href="/html/about-us.html">aboutTheDevelopers</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/gamePage.js"></script>
+
 </body>
 
 </html>
