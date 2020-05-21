@@ -43,7 +43,7 @@ h3 {
   margin-top: 0px;
   padding: 2px;
   float: left;
-  overflow: auto;
+  /* overflow: auto; */
 }
 
 #barContainer {
