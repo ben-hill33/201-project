@@ -1,5 +1,5 @@
 h1 {
-  padding: 20px;
+  padding: 18px;
 }
 
 h3 {
@@ -32,35 +32,4 @@ img {
 
 p {
   padding: 10px 15px;
-}
-
-nav {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  display: inline;
-}
-
-nav li {
-  display: inline;
-  font-family: 'Rajdhani', sans-serif;
-  margin-right: 50px;
-  justify-content: space-evenly;
-  font-size: 20px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.shrink:hover {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-footer {
-  height: 90px;
 }
