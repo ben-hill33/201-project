@@ -26,10 +26,10 @@ h3 {
 }
 
 #statusBarContainer {
-  width: 960px;
-  height: 60px;
+  width: 980px;
+  height: 70px;
   margin: 10px auto;
-  overflow: auto;
+  /* overflow: auto; */
   border-radius: 12px;
   border: 2px solid blue;
 }
@@ -48,7 +48,7 @@ h3 {
 
 #barContainer {
   width: 750px;
-  height: 80px;
+  height: 70px;
   margin-top: 0px;
   float: left;
   overflow: auto;
@@ -57,7 +57,8 @@ h3 {
 #correct-bars li {
   background-color: rgb(43, 255, 0);
   width: 70px;
-  height: 55px;
+  padding-top: 5px;
+  height: 60px;
   display: inline-block;
   float: left;
   margin: 2px;
