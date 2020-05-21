@@ -20,51 +20,8 @@ h2 {
   line-height: 1.3em;
 }
 
-nav {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-nav ul {
-  display: inline-flex;
-  align-content: space-around;
-  justify-content: space-evenly;
-  margin: 0px auto;
-}
-
-nav li {
-  font-family: 'Rajdhani', sans-serif;
-  justify-content: space-evenly;
-  font-size: 20px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.shrink:hover {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-a:hover {
-  color: orange;
-}
-
-.grow:hover {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-/* form  */
-
 button {
   border: 0;
-  /* color: black;
-  box-shadow: 0 10px 0 orange;
-  background: orangered; */
   width: 150px;
   color: white;
   box-shadow: 0 10px 0 rgb(187, 187, 187);

@@ -28,6 +28,9 @@ function renderRows() {
   for (var i = 0; i < playersData.length; i++) {
     for (var j = playersData[i].session.length - 1; j >= 0; j--) {
       var attempts = playersData[i].session[j].attempts;
+      if (attempts === 0) {
+        continue;
+      }
       var correctAttempts = playersData[i].session[j].correctAttempts;
       var ratio = correctAttempts / attempts * 100;
       var stringRatio = Math.round(ratio) + '%';
