@@ -1,6 +1,6 @@
 table {
   min-width: 800px;
-  min-height: 400px;
+  min-height: 100px;
   margin: 20px auto;
   text-align: center;
   background-color: white;
@@ -21,39 +21,6 @@ td {
   padding: 20px;
   text-align: right;
   font-family: 'Rajdhani', sans-serif;
-}
-
-nav {
-  text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-nav ul {
-  display: inline-flex;
-  align-content: space-around;
-  justify-content: space-evenly;
-}
-
-nav li {
-  display: inline;
-  font-family: 'Rajdhani', sans-serif;
-  margin-right: 50px;
-  justify-content: space-evenly;
-  font-size: 20px;
-  padding: 10px;
-  background-color: white;
-  border-radius: 8px;
-}
-
-.shrink:hover {
-  -webkit-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  transform: scale(0.8);
-}
-
-footer {
-  margin-top: 50px;
 }
 
 h1 {
